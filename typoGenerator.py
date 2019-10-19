@@ -12,8 +12,8 @@ typos = []
 if (addr.startswith("www.")):
     typos.append(addr.replace(".","", 1))
 else:
-    addr = "www." + addr # if the webiste was entered without www. I add it
     typos.append("www" + addr)
+    addr = "www." + addr # if the webiste was entered without www. I add it
 
 # 2) Character-omission typos
 addrName = addr.split(".")[1]
