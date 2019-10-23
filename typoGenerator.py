@@ -38,9 +38,17 @@ for i in range(len(addrName)):
 
 # 5) Character-insertion typos
 # the definition for this one was slightly unclear might need to be adjusted
+
 for i in range(len(addrName)):
+    charsadded = [];
     typos.append("www." + addrName[:i+1] + addrName[i] + addrName[i+1:] + "." + addrTopDomain)
     for j in adjacencyDict[addrName[i]]:
+        charsadded.append(j)
         typos.append("www." + addrName[:i+1] + j + addrName[i+1:] + "." + addrTopDomain)
+    if i+1 < len(addrName):
+        for j in adjacencyDict[addrName[i+1]]:
+            if not j in charsadded:  
+                typos.append("www." + addrName[:i+1] + j + addrName[i+1:] + "." + addrTopDomain)
+
 adjacencyFile.close()
 print(typos)
