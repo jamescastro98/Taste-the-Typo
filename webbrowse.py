@@ -8,7 +8,7 @@ async def main():
     browser = await launch()
     page = await browser.newPage()
     await page.goto(sys.argv[1]) #change this to website passed in.
-    await page.screenshot({'path': 'example.png'})
+    await page.screenshot({'path': 'example.png','fullPage' : True})
     str= await page.content()
     await browser.close()
     f = open("browserdump.html", "w") #need to make an array of files to dump them at.
