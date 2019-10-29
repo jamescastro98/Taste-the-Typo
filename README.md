@@ -11,6 +11,7 @@ Django - Used to connect the front end to the respective scripts.
 
 
 **Tentative Responsibilities**
+
 William Braxton - Front End (HTML/CSS)
 
 James Castro - Headless Browser/Django
