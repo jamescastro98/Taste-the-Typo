@@ -1,12 +1,17 @@
 import sys
 import asyncio
 from pyppeteer import launch
-async def main():
+
+# if len(sys.argv) > 1 :
+#     URL = sys.argv[1]
+
+async def browse():
     browser = await launch()
     page = await browser.newPage()
+    print(URL)
     try:
-        await page.goto(sys.argv[1]) #change this to website passed in.
-        await page.screenshot({'path': 'example.png','fullPage' : True})
+        await page.goto(URL) #change this to website passed in.
+        await page.screenshot({'path': URL+'.png','fullPage' : True})
         str= await page.content()
     except:
         str="Error Occurred - Either the website does not exist, or this device is not connected to wifi"
@@ -16,4 +21,11 @@ async def main():
     f.write(str)
     print("Contents written in browserdump (Error String stored in HTML doc if !exist)")
     f.close()
-asyncio.get_event_loop().run_until_complete(main())
+    return
+
+def browse_helper(URLarg:str):
+    print('ping')
+    URL = URLarg
+    browse()
+    asyncio.get_event_loop().run_until_complete(browse())
+    return

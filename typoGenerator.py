@@ -1,11 +1,10 @@
 import sys
 import json
 
-
 def generateTypos(site: str):
-    if len(sys.argv) < 2:
-        print("missing webiste")
-        sys.exit(0)
+    # if len(sys.argv) < 2:         # not being used when being called from nodeConnection, replaced with similar
+    #     print("missing website")
+    #     sys.exit(0)
 
     addr = site
     typos = []
@@ -15,7 +14,7 @@ def generateTypos(site: str):
         typos.append(addr.replace(".","", 1))
     else:
         typos.append("www" + addr)
-        addr = "www." + addr # if the webiste was entered without www. I add it
+        addr = "www." + addr # if the website was entered without www. I add it
 
     # 2) Character-omission typos
     addrName = addr.split(".")[1]
@@ -42,7 +41,7 @@ def generateTypos(site: str):
     # the definition for this one was slightly unclear might need to be adjusted
 
     for i in range(len(addrName)):
-        charsadded = [];
+        charsadded = []
         typos.append("www." + addrName[:i+1] + addrName[i] + addrName[i+1:] + "." + addrTopDomain)
         for j in adjacencyDict[addrName[i]]:
             charsadded.append(j)
@@ -55,4 +54,4 @@ def generateTypos(site: str):
     adjacencyFile.close()
     return typos
 
-print(generateTypos(sys.argv[1]))
+#print(generateTypos(sys.argv[1]))
