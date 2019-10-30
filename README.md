@@ -18,4 +18,10 @@ James Castro - Headless Browser/Django
 
 Joey Spivack - Typo Generator/Django
 
-Nathan Chan - Network Node Connections in Django
+Nathan Chan - Network Node Connections
+Comments & Issues:
+    -May just be me: but need to append 'https://' to URL (i.e. google.com -> https://google.com) for webbrowse.py to work.
+        However, typogenerator.py does not append to this (instead just creates a list of "www.[urlname].com" typos), so nodeConnection does not work correctly yet
+    -Not sure how to implement different network nodes yet, as of now I just want to have typoGenerator.py and webbrowse.py play nice and then focus on nodeConnection.py to
+        run them as network nodes. Using threads as of now just to experiment.
+    
