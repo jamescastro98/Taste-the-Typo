@@ -1,10 +1,12 @@
 from typoGenerator import generateTypos
-from webbrowse import browse_helper
+from webbrowse import test
 import sys
-import os
-import subprocess
+import _thread
 
-typos = generateTypos('www.google.com')
+typos = generateTypos('https://amazon.com')
 print(typos)
-    # for typo in typos:
-    #     browse_helper(typo)
+for typo in typos:
+    try:
+        _thread.start_new_thread(test(typo))
+    except:
+        print('Error: unable to start thread')
