@@ -12,10 +12,10 @@ Django - Used to connect the front end to the respective scripts.
 
 **Tentative Responsibilities**
 
-William Braxton - Front End (HTML/CSS)
+William Braxton - Front End (Angular/HTML/CSS)
 
 James Castro - Headless Browser/Django
 
 Joey Spivack - Typo Generator/Django
 
-Nathan Chan - Network Node Connections
+Nathan Chan - Network Node Connections in Django
