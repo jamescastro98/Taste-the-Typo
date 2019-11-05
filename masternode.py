@@ -1,7 +1,7 @@
 from typoGenerator import generateTypos
 import socket
 import sys
-
+import os
 
 arg = "messenger.com"  
 # set arguments
@@ -14,6 +14,13 @@ else:
 print("Will now generate typos for \"" + arg + "\" ") # debugging
 # generate typos
 typos = generateTypos(arg)
+
+#THIS IS WHAT JAMES ADDED
+os.mkdir(arg)
+os.mkdir((arg+'/HTML'))
+os.mkdir((arg+'/IMG'))
+#THIS IS WHAT JAMES ADDED
+
 
 # server-side connection
 socket = socket.socket()
