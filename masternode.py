@@ -49,7 +49,10 @@ socket.bind(('', port))
 socket.listen(5)
 c, addr = socket.accept()
 print("connected to ", addr)
-task_management("https://messenger.com", c)
+i = 0
+while i < 3:
+    task_management("https://messenger.com", c)
+    i = i + 1
 # for typo in typos:
 #     msg = typo
 #     if typo.find("www.", 0, 4) != -1:
