@@ -7,7 +7,7 @@ then after the list is generated, it will execute many instances of webbrowse.py
 
 Pyppeteer - Python port of Puppeteer - used for creating headless chrome browsers.
 
-Django - Used to connect the front end to the respective scripts.
+Django - Backend used to connect the front end to the respective scripts.
 
 
 **Tentative Responsibilities**
