@@ -4,12 +4,13 @@ import time
 
 socket = socket.socket()
 
-port = 332
+port = 331
 
-socket.connect(('127.0.0.1', port))
 socket.settimeout(10)
 
+
 while True:
+    socket.connect(('127.0.0.1', port))
     server_msg = socket.recv(1024)
     server_msg = server_msg.decode("utf-8")
     print(server_msg)
