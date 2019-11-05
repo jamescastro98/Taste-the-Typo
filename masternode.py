@@ -49,20 +49,17 @@ socket.bind(('', port))
 socket.listen(5)
 c, addr = socket.accept()
 print("connected to ", addr)
-i = 0
-while i < 3:
-    task_management("https://messenger.com", c)
-    i = i + 1
-# for typo in typos:
-#     msg = typo
-#     if typo.find("www.", 0, 4) != -1:
-#         msg = msg + ' = [valid]'   # debugging statement
-#         typo = preptypo(typo)       # refer to preptypo() 
-#         # probably check if domain is also present
-#         try:
-#             # cur_thread = threading.Thread(target=task_management, args=(typo, socket))
-#             # cur_thread.start()
-#             task_management(typo, addr)   # for threadless testing
-#         except:
-#             print('Error: unable to start thread')
-#     # print(msg)  # debugging
+
+for typo in typos:
+    msg = typo
+    if typo.find("www.", 0, 4) != -1:
+        msg = msg + ' = [valid]'   # debugging statement
+        typo = preptypo(typo)       # refer to preptypo() 
+        # probably check if domain is also present
+        try:
+            cur_thread = threading.Thread(target=task_management, args=(typo, c))
+            cur_thread.start()
+            # task_management(typo, c)   # for threadless testing
+        except:
+            print('Error: unable to start thread')
+    # print(msg)  # debugging
