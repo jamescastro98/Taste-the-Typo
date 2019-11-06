@@ -3,6 +3,7 @@ import socket
 import sys
 import os
 import threading
+import signal
 
 # adjusts output from typoGenerator.py by:
 #   removing "www." from the string (not sure if needed but is cleaner)
@@ -57,10 +58,23 @@ def handleNewConnections():
     while True:
         (connection, addr) = socket.accept()
         connections.append([connection, addr])
+        print(connections)
 
 connectionsThread = threading.Thread(target = handleNewConnections, args = ())
 connectionsThread.setDaemon(True)
 connectionsThread.start()
+
+threads = []
+def shutdown(sig, frame):
+    running = False
+    print("shuting down...")
+    for t in threads:
+        t.join()
+    serverSocket.close()
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, shutdown)
+
 
 for typo in typos:
     msg = typo
@@ -72,9 +86,10 @@ for typo in typos:
             while (len(connections) == 0):
                 pass
                 # halt until new connection comes through
-            (con, ad) = connections.pop(1)
-            print(con,ad)
+            (con, ad) = connections[0]
+            connections = connections[1:]
             cur_thread = threading.Thread(target=task_management, args=(typo, con))
+            threads.append(cur_thread)
             cur_thread.start()
             # task_management(typo, c)   # for threadless testing
         except:
