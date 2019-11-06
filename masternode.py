@@ -15,15 +15,22 @@ def preptypo(typo):
     print('Prepped '+typo+' to enter test()')   # debugging statement
     return typo
 
+def recvfile(filename, addr):
+    f = open("MASTER"+filename,'wb')
+    content = addr.recv(1024)
+    while(content):
+        f.write(content)
+        content=addr.recv(1024)
+    f.close()
+
 # sends tasks to workernode and then waits for work
 def task_management(typo, addr):
     msg = bytes(typo, encoding='utf-8')
     addr.send(msg)   # send typo to workernodes
-    worker_msg = addr.recv(1024)               # this might not recv all of the data
-    worker_msg = worker_msg.decode("utf-8")
-    print('******************************************')
-    print(worker_msg)   # debugging
-    print('******************************************')
+    filename = addr.recv(1024)               # this might not recv all of the data
+    filename = filename.decode('utf-8')
+    print("*** \""+filename+"\" recieved from worker")   # debugging
+    recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
 arg = "messenger.com"  
@@ -49,7 +56,7 @@ typos = generateTypos(arg)
 connections = []
 
 socket = socket.socket()
-port = 330
+port = 339
 socket.bind(('', port))
 socket.listen(5)
 

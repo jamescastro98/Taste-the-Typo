@@ -1,5 +1,5 @@
 from typoGenerator import generateTypos
-from webbrowse import test
+from webbrowse import fetchURL
 import sys
 import _thread
 import string
@@ -17,7 +17,7 @@ for typo in typos:
         # probably check if domain is also present
         print('Prepped '+typo+' to enter test()')   # debugging statement
         try:
-            _thread.start_new_thread(test(typo))
+            _thread.start_new_thread(fetchURL(typo))
         except:
             print('Error: unable to start thread')
     print(msg)  # debugging
