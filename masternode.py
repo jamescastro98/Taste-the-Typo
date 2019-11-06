@@ -51,8 +51,6 @@ socket = socket.socket()
 port = 330
 socket.bind(('', port))
 socket.listen(5)
-print("connected to ", addr)
-
 
 def handleNewConnections():
     global connections
@@ -60,7 +58,7 @@ def handleNewConnections():
         (connection, addr) = socket.accept()
         connections.append([connection, addr])
 
-connectionsThread = threading.Thread(target = handelNewConnections, args = ())
+connectionsThread = threading.Thread(target = handleNewConnections, args = ())
 connectionsThread.setDaemon(True)
 connectionsThread.start()
 
@@ -71,8 +69,11 @@ for typo in typos:
         typo = preptypo(typo)       # refer to preptypo() 
         # probably check if domain is also present
         try:
-            while (len(connections) == 0) # halt until new connection comes through
+            while (len(connections) == 0):
+                pass
+                # halt until new connection comes through
             (con, ad) = connections.pop(1)
+            print(con,ad)
             cur_thread = threading.Thread(target=task_management, args=(typo, con))
             cur_thread.start()
             # task_management(typo, c)   # for threadless testing
