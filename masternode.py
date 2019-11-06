@@ -18,11 +18,12 @@ def preptypo(typo):
 def task_management(typo, addr):
     msg = bytes(typo, encoding='utf-8')
     addr.send(msg)   # send typo to workernodes
-    worker_msg = addr.recv(1024)               # receive file from worker?
+    worker_msg = addr.recv(1024)               # this might not recv all of the data
     worker_msg = worker_msg.decode("utf-8")
     print('******************************************')
     print(worker_msg)   # debugging
     print('******************************************')
+    addr.close() # now I am expecting the worker node to re establish the connection
 
 arg = "messenger.com"  
 # set arguments
@@ -43,12 +44,25 @@ typos = generateTypos(arg)
 #THIS IS WHAT JAMES ADDED
 
 # server-side connection
+
+connections = []
+
 socket = socket.socket()
 port = 330
 socket.bind(('', port))
 socket.listen(5)
-c, addr = socket.accept()
 print("connected to ", addr)
+
+
+def handleNewConnections():
+    global connections
+    while True:
+        (connection, addr) = socket.accept()
+        connections.append([connection, addr])
+
+connectionsThread = threading.Thread(target = handelNewConnections, args = ())
+connectionsThread.setDaemon(True)
+connectionsThread.start()
 
 for typo in typos:
     msg = typo
@@ -57,7 +71,9 @@ for typo in typos:
         typo = preptypo(typo)       # refer to preptypo() 
         # probably check if domain is also present
         try:
-            cur_thread = threading.Thread(target=task_management, args=(typo, c))
+            while (len(connections) == 0) # halt until new connection comes through
+            (con, ad) = connections.pop(1)
+            cur_thread = threading.Thread(target=task_management, args=(typo, con))
             cur_thread.start()
             # task_management(typo, c)   # for threadless testing
         except:

@@ -17,3 +17,5 @@ while True:
     # fetchURL(server_msg)  # commented out to test connection between nodes
     # send return value back to masternode?
     # grab next job
+    socket.connect(('127.0.0.1', port)) 
+    # the way I (Joey) Edited it, I have the master node disconnect after receving data. this is to prevent timeouts
