@@ -9,16 +9,22 @@ Pyppeteer - Python port of Puppeteer - used for creating headless chrome browser
 
 Django - Backend used to connect the front end to the respective scripts.
 
+**JavaScript Third Party Resources**
+typewriter-effect - Simple script available on npm for typewriter effect
+
+grapheme-splitter - script used in aiding retyping for typewriter effect
+
+parcel - bundles everything together
 
 **Tentative Responsibilities**
 
-William Braxton - Front End (Angular/HTML/CSS)
+William Braxton - Django/Backend
 
-James Castro - Headless Browser/Django
+James Castro - Pyppeteer Scripts & Frontend
 
-Joey Spivack - Typo Generator/Django
+Joey Spivack - Typo Generator & Network Node Connections
 
-Nathan Chan - Network Node Connections
+Nathan Chan - Network Node Connections & Pyppeteer Scripts
 Comments & Issues:
     -May just be me: but need to append 'https://' to URL (i.e. google.com -> https://google.com) for webbrowse.py to work.
         However, typogenerator.py does not append to this (instead just creates a list of "www.[urlname].com" typos), so nodeConnection does not work correctly yet
