@@ -1,7 +1,74 @@
-hello
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taste the Typo</title>
+    <meta charset="UTF-8" />
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+#app {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: bold;
+  padding-left:10%;
+  padding-right:10%;
+  font-family: 'Montserrat', sans-serif;
+  padding-top:200px;
+}
 
-<form action="/result/" method="post">
+strong {
+  font-weight: 700;
+}
+.content{
+  padding-top:5px;
+  padding-left:15%;
+  padding-right:15%;
+  font-weight:lighter;
+}
+.parallax{
+   background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
+   min-height:1000px; /*should be 100%*/
+   /* Create the parallax scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color:white;
+   font-size:20px;
+   letter-spacing:5px;
+                }
+</style>
+  </head>
+
+  <body>
+ <div class="parallax">
+    <div align="center">
+	<div id="app">
+    <script src="https://unpkg.com/lightweight-typewriter@2.0.8/build/typewriter.min.js"></script>
+    <h1 class="myCoolTypeWriter"></h1>
+<script>
+  const typeWriter = new TypeWriter('myCoolTypeWriter', {
+    text: ['Taste the Typo', 'A TypoSquatting Detector'],
+    speed:2000,
+    cursorStyle: {
+      color: 'white',
+      width:'5px'
+    },
+  }).start();
+  
+  setTimeout(() => {
+  typeWriter.stop()
+}, 12000);
+  // Don't forget to chain start()
+</script> </div>
+    <div class="content">
+  Ever heard of TypoSquatting? Well, we're here to help! Typosquatting is a
+  practice where an individual will buy a domain and hope that users will mispell its URL,
+  linking instead to their website. They may try to exploit users by tricking them into
+  thinking you're asking for the information. So, is your website being typosquatted?
+  Enter your URL to find out!
+
+  <form action="/result/" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
@@ -14,3 +81,10 @@ hello
         
     {% endfor %}
 </div>
+
+  <br>
+    </div>
+  </div>
+ </div>
+  </body>
+</html>
