@@ -1,8 +1,20 @@
 from django.views import generic
+from .forms import WebForm
+from django.shortcuts import render
+
 #from models import Post
 
 #change!
-class HomeView(generic.TemplateView):
-    template_name = 'home.html'
+def HomeView(request):
+    if request.method == 'GET':
+        form = WebForm()
+    return render(request, "home.html", {'form':form})
 #    model = Post
 #    context_object_name = "post"
+
+def ResultView(request):
+    if request.method =='POST':
+        form = WebForm(request.POST)
+        if form.is_valid():
+            input = form.data["weburl"]
+            return render(request, "result.html", {'input':input})

@@ -1,5 +1,12 @@
 hello
 
+
+<form action="/result/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
 <div class="col-sm-8">
     {% for image in results %}
         <h2>{{image.data}}</h2>
