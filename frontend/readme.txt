@@ -3,7 +3,7 @@ Now we simply need to figure out how to merge the home template with this basic 
 
 To run, download npm if you don't have it.
 npm install
-npm build run
-parcel build index.html
+npm run build
+parcel index.html
 
 it'll run on localhost:1234
