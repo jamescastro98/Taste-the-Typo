@@ -8,7 +8,7 @@
 
 #app {
   font-size: 60px;
-  line-height: 78px;
+  line-height: 98px;
   font-weight: bold;
   padding-left:10%;
   padding-right:10%;
@@ -23,8 +23,12 @@ strong {
   padding-top:5px;
   padding-left:15%;
   padding-right:15%;
+  background-color: black;
+  opacity: .5;
   font-weight:lighter;
 }
+
+
 .parallax{
    background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
    min-height:1000px; /*should be 100%*/
@@ -45,9 +49,9 @@ strong {
     <div align="center">
 	<div id="app">
     <script src="https://unpkg.com/lightweight-typewriter@2.0.8/build/typewriter.min.js"></script>
-    <h1 class="myCoolTypeWriter"></h1>
+    <h1 class="tw"></h1>
 <script>
-  const typeWriter = new TypeWriter('myCoolTypeWriter', {
+  const typeWriter = new TypeWriter('tw', {
     text: ['Taste the Typo', 'A TypoSquatting Detector'],
     speed:2000,
     cursorStyle: {
@@ -59,15 +63,17 @@ strong {
   setTimeout(() => {
   typeWriter.stop()
 }, 12000);
-  // Don't forget to chain start()
+  
 </script> </div>
     <div class="content">
+        <div class="words">
   Ever heard of TypoSquatting? Well, we're here to help! Typosquatting is a
   practice where an individual will buy a domain and hope that users will mispell its URL,
   linking instead to their website. They may try to exploit users by tricking them into
   thinking you're asking for the information. So, is your website being typosquatted?
   Enter your URL to find out!
-
+<br>
+<br>
   <form action="/result/" method="post">
     {% csrf_token %}
     {{ form }}
@@ -80,6 +86,7 @@ strong {
         <small>Link: {{image.link}}</small>
         
     {% endfor %}
+</div>
 </div>
 
   <br>
