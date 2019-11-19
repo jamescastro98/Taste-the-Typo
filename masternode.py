@@ -33,17 +33,17 @@ def task_management(typo, addr):
     recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
-arg = "messenger.com"  
+#arg = "messenger.com"  
 # set arguments
-if len(sys.argv) < 2:
-    print("[Alert] no website specified.")
-    print("default value, \"" + arg + "\" set...") # debugging
-else:
-    arg = sys.argv[1]
+#if len(sys.argv) < 2:
+#    print("[Alert] no website specified.")
+#    print("default value, \"" + arg + "\" set...") # debugging
+#else:
+#    arg = sys.argv[1]
 
-print("Will now generate typos for \"" + arg + "\" ") # debugging
+#print("Will now generate typos for \"" + arg + "\" ") # debugging
 # generate typos
-typos = generateTypos(arg)
+#typos = generateTypos(arg)
 
 #THIS IS WHAT JAMES ADDED
 #os.mkdir(arg)
@@ -54,24 +54,26 @@ typos = generateTypos(arg)
 # server-side connection
 
 connections = []
+socket = None
+def setupConnections():
+    global socket
+    socket = socket.socket()
+    port = 339
+    socket.bind(('', port))
+    socket.listen(5)
 
-socket = socket.socket()
-port = 339
-socket.bind(('', port))
-socket.listen(5)
+    connectionsThread = threading.Thread(target = handleNewConnections, args = ())
+    connectionsThread.setDaemon(True)
+    connectionsThread.start()
 
 def handleNewConnections():
     global connections
+    global socket
     while True:
         (connection, addr) = socket.accept()
         connections.append([connection, addr])
         print(connections)
 
-connectionsThread = threading.Thread(target = handleNewConnections, args = ())
-connectionsThread.setDaemon(True)
-connectionsThread.start()
-
-threads = []
 def shutdown(sig, frame):
     running = False
     print("shuting down...")
@@ -82,23 +84,28 @@ def shutdown(sig, frame):
 
 signal.signal(signal.SIGINT, shutdown)
 
-
-for typo in typos:
-    msg = typo
-    if typo.find("www.", 0, 4) != -1:
-        msg = msg + ' = [valid]'   # debugging statement
-        typo = preptypo(typo)       # refer to preptypo() 
-        # probably check if domain is also present
-        try:
-            while (len(connections) == 0):
-                pass
-                # halt until new connection comes through
-            (con, ad) = connections[0]
-            connections = connections[1:]
-            cur_thread = threading.Thread(target=task_management, args=(typo, con))
-            threads.append(cur_thread)
-            cur_thread.start()
-            # task_management(typo, c)   # for threadless testing
-        except:
-            print('Error: unable to start thread')
-    # print(msg)  # debugging
+def gatherTypoSquatSites(arg="google.com"):
+    global connections
+    threads = []
+    responces = 0
+    typos = generatetypos(arg)
+    totaltypos = len(typos)
+    for typo in typos:
+        msg = typo
+        if typo.find("www.", 0, 4) != -1:
+            msg = msg + ' = [valid]'   # debugging statement
+            typo = preptypo(typo)       # refer to preptypo() 
+            # probably check if domain is also present
+            try:
+                while (len(connections) == 0):
+                    pass
+                    # halt until new connection comes through
+                (con, ad) = connections[0]
+                connections = connections[1:]
+                cur_thread = threading.Thread(target=task_management, args=(typo, con))
+                threads.append(cur_thread)
+                cur_thread.start()
+                # task_management(typo, c)   # for threadless testing
+            except:
+                print('Error: unable to start thread')
+        # print(msg)  # debugging
