@@ -1,9 +1,10 @@
 from typoGenerator import generateTypos
-import socket
+import socket as sock
 import sys
 import os
 import threading
 import signal
+import time
 
 # adjusts output from typoGenerator.py by:
 #   removing "www." from the string (not sure if needed but is cleaner)
@@ -54,18 +55,9 @@ def task_management(typo, addr):
 # server-side connection
 
 connections = []
-socket = None
-def setupConnections():
-    global socket
-    socket = socket.socket()
-    port = 339
-    socket.bind(('', port))
-    socket.listen(5)
-
-    connectionsThread = threading.Thread(target = handleNewConnections, args = ())
-    connectionsThread.setDaemon(True)
-    connectionsThread.start()
-
+socket = []
+threads = []
+running = True
 def handleNewConnections():
     global connections
     global socket
@@ -75,20 +67,48 @@ def handleNewConnections():
         print(connections)
 
 def shutdown(sig, frame):
+    global threads
+    global socket
+    global running
     running = False
     print("shuting down...")
     for t in threads:
         t.join()
-    serverSocket.close()
+    socket.close()
     sys.exit(0)
 
-signal.signal(signal.SIGINT, shutdown)
+def cleanup():
+    global threads
+    while True:
+        time.sleep(2)
+        for t in threads:
+            if not t.isAlive():
+                t.join()
+                threads = [tr for tr in threads if not tr == t]
+                print(t)
+                print(threads)
+
+def setupConnections():
+    global socket
+    socket = sock.socket()
+    port = 339
+    socket.bind(('', port))
+    socket.listen(5)
+
+    connectionsThread = threading.Thread(target = handleNewConnections, args = ())
+    connectionsThread.setDaemon(True)
+    connectionsThread.start()
+    cleanupThread = threading.Thread(target = cleanup, args = ())
+    cleanupThread.setDaemon(True)
+    cleanupThread.start()
+
 
 def gatherTypoSquatSites(arg="google.com"):
     global connections
-    threads = []
+    global threads
+    global running
     responces = 0
-    typos = generatetypos(arg)
+    typos = generateTypos(arg)
     totaltypos = len(typos)
     for typo in typos:
         msg = typo
@@ -97,9 +117,10 @@ def gatherTypoSquatSites(arg="google.com"):
             typo = preptypo(typo)       # refer to preptypo() 
             # probably check if domain is also present
             try:
-                while (len(connections) == 0):
+                while len(connections) == 0 and running == True: #stop untill a new connection comes through or the program terminates
                     pass
-                    # halt until new connection comes through
+                if running == False:
+                    return
                 (con, ad) = connections[0]
                 connections = connections[1:]
                 cur_thread = threading.Thread(target=task_management, args=(typo, con))
