@@ -40,13 +40,13 @@ def fetchURL(URL:str):
             # print(imgName)    # debugging 
             await page.goto(URL) #change this to website passed in.
             await page.screenshot({'path':name+'.png','fullPage' : True})
-            str= await page.content()
+            st= await page.content()
         except:
-            str="Error Occurred - Either the website does not exist, or this device is not connected to wifi"
-            print(str)
+            st="Error Occurred - Either the website does not exist, or this device is not connected to wifi"
+            print(st)
         await browser.close()
         f = open(name +".html", "w") #need to make an array of files to dump them at.
-        f.write(str)
+        f.write(st)
         print("Contents written in browserdump (Error String stored in HTML doc if !exist)")
         f.close()
     asyncio.get_event_loop().run_until_complete(browse())
