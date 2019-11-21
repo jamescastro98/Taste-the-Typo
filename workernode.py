@@ -1,4 +1,4 @@
-from webbrowse import fetchRetURL
+from webbrowse import fetchURL
 import socket
 import time
 
@@ -10,17 +10,19 @@ s.settimeout(10)
 s.connect(('127.0.0.1', port))
 
 def sendFile(filename, socket):
-    f = open(filename, "rb")
-    content = f.read(1024)
-    while(content):
-        socket.send(content)
-        content=f.read(1024)
-
+    try:
+        f = open(filename, "rb")
+        content = f.read(1024)
+        while(content):
+            socket.send(content)
+            content=f.read(1024)
+    except:
+        print("No Result Found!")
 while True:
     server_msg = s.recv(1024)
     server_msg = server_msg.decode("utf-8")
     print(server_msg)
-    filename = fetchRetURL(server_msg)  # commented out to test connection between nodes
+    filename = fetchURL(server_msg)  # commented out to test connection between nodes
     s.send(bytes(filename, encoding='utf-8'))
     print('*** file sent')
     sendFile(filename, s)

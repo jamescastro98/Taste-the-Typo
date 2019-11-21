@@ -17,12 +17,13 @@ def preptypo(typo):
     return typo
 
 def recvfile(filename, addr):
-    f = open("MASTER"+filename,'wb')
-    content = addr.recv(1024)
-    while(content):
-        f.write(content)
-        content=addr.recv(1024)
-    f.close()
+    print("I genuinely don't know what this is supposed to do.")
+    #f = open("MASTER"+filename,'wb')
+    #content = addr.recv(1024)
+    #while(content):
+     #   f.write(content)
+      #  content=addr.recv(1024)
+    #f.close()
 
 # sends tasks to workernode and then waits for work
 def task_management(typo, addr):
