@@ -46,24 +46,26 @@ strong {
   <body>
  <div class="parallax">
     <div align="center">
-	<div id="app">
-    <script src="https://unpkg.com/lightweight-typewriter@2.0.8/build/typewriter.min.js"></script>
-    <h1 class="tw"></h1>
-<script>
-  const typeWriter = new TypeWriter('tw', {
-    text: ['Taste the Typo', 'A TypoSquatting Detector'],
-    speed:2000,
-    cursorStyle: {
-      color: 'white',
-      width:'5px'
-    },
-  }).start();
-  
-  setTimeout(() => {
-  typeWriter.stop()
-}, 12000);
-  
-</script> </div>
+  <div id="app"> </div>
+
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+  const app = document.getElementById("app");
+const typewriter = new Typewriter(app, {
+  loop: false,
+  delay: 75
+});
+
+typewriter
+  .pauseFor(2500)
+  .typeString("Taste the Typo: A TpyoSquatting Detector.")
+  .pauseFor(300)
+  .deleteChars(22)
+  .typeString("ypoSquatting Detector.")
+  .pauseFor(1000)
+  .start();
+  </script>
+
     <div class="content">
         <div class="words">
   Ever heard of TypoSquatting? Well, we're here to help! Typosquatting is a
