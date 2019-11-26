@@ -10,11 +10,9 @@ Pyppeteer - Python port of Puppeteer - used for creating headless chrome browser
 Django - Backend used to connect the front end to the respective scripts.
 
 **JavaScript Third Party Resources**
+
 typewriter-effect - Simple script available on npm for typewriter effect
 
-grapheme-splitter - script used in aiding retyping for typewriter effect
-
-parcel - bundles everything together
 
 **Tentative Responsibilities**
 
