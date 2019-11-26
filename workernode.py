@@ -14,7 +14,7 @@ def sendFile(filename, socket):
 
 def start_worker():
     s = socket.socket()
-    port = 339
+    port = 6789
     s.settimeout(10)
     s.connect(('127.0.0.1', port))
 

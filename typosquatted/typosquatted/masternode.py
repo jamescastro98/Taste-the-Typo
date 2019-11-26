@@ -1,4 +1,4 @@
-from . import typoGenerator
+from typoGenerator import generateTypos
 import socket as sock
 import sys
 import os
@@ -92,7 +92,7 @@ def cleanup():
 def setupConnections():
     global socket
     socket = sock.socket()
-    port = 339
+    port = 6789
     socket.bind(('', port))
     socket.listen(5)
 
