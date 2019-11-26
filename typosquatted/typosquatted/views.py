@@ -2,8 +2,9 @@ from django.views import generic
 from .forms import WebForm
 from django.shortcuts import render
 
-from masternode import setupConnections, gatherTypoSquatSites, shutdown
-from workernode import start_worker
+from .masternode import setupConnections,gatherTypoSquatSites
+from .workernode import start_worker
+import signal
 
 import time
 #from models import Post
@@ -21,14 +22,15 @@ def ResultView(request):
         form = WebForm(request.POST)
         if form.is_valid():
             print("Request Gotten!")
+            input = form.data["weburl"]
             #Execute Master + Worker Nodes Here
             # masternode setup -Nathan
-                # signal.signal(signal.SIGINT, shutdown)
-                # setupConnections()
-                # gatherTypoSquatSites()    # not too sure what the arg is
+           # signal.signal(signal.SIGINT, shutdown)
+            setupConnections()
+            gatherTypoSquatSites(input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
-                # start_worker()
+            start_worker()
             #
             #   note: this should only start one worker, 
             #       not sure if we only want X amount of workers or scale it to
@@ -37,5 +39,4 @@ def ResultView(request):
             #
 
             time.sleep(5)
-            input = form.data["weburl"]
             return render(request, "result.html", {'input':input})
