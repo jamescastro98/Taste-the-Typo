@@ -14,9 +14,9 @@ def sendFile(filename, socket):
 
 def start_worker():
     s = socket.socket()
-    port = 6789
+    port = 6899
     s.settimeout(10)
-    s.connect(('127.0.0.1', port))
+    s.connect(('127.0.0.1', port)) # CHANGE TO 10.0.2.2 on VM!
 
     while True:
         server_msg = s.recv(1024)
