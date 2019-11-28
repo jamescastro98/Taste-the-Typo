@@ -23,9 +23,9 @@ def ResultView(request):
         if form.is_valid():
             print("Request Gotten!")
             input = form.data["weburl"]
-            #Execute Master + Worker Nodes Here
+            # Execute Master + Worker Nodes Here
             # masternode setup -Nathan
-           # signal.signal(signal.SIGINT, shutdown)
+            # signal.signal(signal.SIGINT, shutdown)
             setupConnections()
             gatherTypoSquatSites(input)    # not too sure what the arg is
             #

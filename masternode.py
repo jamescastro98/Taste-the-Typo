@@ -16,14 +16,20 @@ def preptypo(typo):
     print('Prepped '+typo+' to enter test()')   # debugging statement
     return typo
 
+# creates folder of site (if not done already) and stores file in there
 def recvfile(filename, addr):
-    print("I genuinely don't know what this is supposed to do.")
-    #f = open("MASTER"+filename,'wb')
-    #content = addr.recv(1024)
-    #while(content):
-     #   f.write(content)
-      #  content=addr.recv(1024)
-    #f.close()
+    directory_name = "Results"
+    try:
+        os.mkdir(directory_name) # not sure if you want to change the directory name so it's relevant to the site being 
+    except OSError as error:
+        print(error)
+
+    f = open(directory_name+"\\"+filename, "wb")   
+    content = addr.recv(1024)   
+    while(content):
+        f.write(content)
+        content = addr.recv(1024)
+    f.close()
 
 # sends tasks to workernode and then waits for work
 def task_management(typo, addr):

@@ -29,9 +29,6 @@ def fetchURL(URL:str):
     asyncio.get_event_loop().run_until_complete(browse())
     return filename
 
-
-
-
 def fetchRetURL(URL:str):
     name = '_'+URL.replace('.','_').replace('https://','') #Underscore to help all the .png to stay in one place for debugging
     filename = name + ".html"
