@@ -23,9 +23,15 @@ def start_worker():
         server_msg = server_msg.decode("utf-8")
         print(server_msg)
         filename = fetchURL(server_msg)  # commented out to test connection between nodes
-        s.send(bytes(filename, encoding='utf-8'))
-        print('*** file sent')
-        sendFile(filename, s)
+        if(filename!="404"):
+            s.send(bytes(filename+".html", encoding='utf-8'))
+            sendFile(filename+".html", s)
+            time.sleep(1) #give it a second to process.
+            
+            s.send(bytes(filename+".png", encoding='utf-8'))
+            sendFile(filename+".png", s)
+            print('*** file sent')
+            
         # send return value back to masternode?
         # grab next job
         s.close()

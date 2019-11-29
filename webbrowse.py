@@ -7,10 +7,12 @@ def fetchURL(URL:str):
     name = '_'+URL.replace('.','_').replace('https://','') #Underscore to help all the .png to stay in one place for debugging
     filename = name + ".html"
     async def browse():
+        found=False
         browser = await launch()
         page = await browser.newPage()
         # print(URL)    # debugging
-        name = '_'+URL.replace('.','_').replace('https://','') #Underscore to help all the .png to stay in one place for debugging
+         #Underscore to help all the .png to stay in one place for debugging
+        name = '_'+URL.replace('.','_').replace('https://','')
         
         try:
             # print(imgName)    # debugging 
@@ -20,14 +22,18 @@ def fetchURL(URL:str):
             f = open(name +".html", "w") #need to make an array of files to dump them at.
             f.write(st)
             print("Success!")
+            found=True
             f.close()
+            name = '_'+URL.replace('.','_').replace('https://','')
+            return name
         except:
-            st="Error Occurred - Either the website does not exist, or this device is not connected to wifi"
-            print(st)
+            #st="Error Occurred - Either the website does not exist, or this device is not connected to wifi"
+            name="404"
+            return name
         await browser.close()
   
-    asyncio.get_event_loop().run_until_complete(browse())
-    return filename
+    name=asyncio.get_event_loop().run_until_complete(browse())
+    return name
 
 def fetchRetURL(URL:str):
     name = '_'+URL.replace('.','_').replace('https://','') #Underscore to help all the .png to stay in one place for debugging
@@ -56,4 +62,4 @@ def fetchRetURL(URL:str):
 if len(sys.argv) > 1 :
     URL=sys.argv[1]
     # PATH=sys.argv[2]
-    fetchURL(URL)
+    print(fetchURL(URL))

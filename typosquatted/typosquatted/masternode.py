@@ -18,7 +18,7 @@ def preptypo(typo):
 
 def recvfile(filename, addr):
     print("I genuinely don't know what this is supposed to do.")
-    f = open(filename,'wb')
+    f = open("MASTER"+filename,'wb')
     content = addr.recv(1024)
     while(content):
         f.write(content)
