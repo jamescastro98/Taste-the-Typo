@@ -13,7 +13,6 @@
   font-weight: bold;
   padding-left:10%;
   padding-right:10%;
-  font-family: 'Montserrat', sans-serif;
   padding-top:225px;
 }
 
@@ -25,11 +24,17 @@ strong {
   padding-top:10px;
   padding-left:15%;
   padding-right:15%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   font-weight:lighter;
 }
 
-
+.footer{
+   margin-top:20px;
+   font-size:20px;
+   letter-spacing:1px;
+   font-weight: bold;
+                }
+  
 .parallax{
    background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
    min-height:1300px; /*should be 100%*/
@@ -38,6 +43,7 @@ strong {
    background-attachment: fixed;
    background-position: center;
    background-repeat: no-repeat;
+   font-family: 'Montserrat', sans-serif;
    background-size: cover;
    color:white;
    font-size:20px;
@@ -61,10 +67,10 @@ const typewriter = new Typewriter(app, {
 
 typewriter
   .pauseFor(2500)
-  .typeString("Taste the Typo: A TpyoSquatting Detector.")
+  .typeString("Taste the Typo: A TypoSquatting Deetector.")
   .pauseFor(300)
-  .deleteChars(22)
-  .typeString("ypoSquatting Detector.")
+  .deleteChars(9)
+  .typeString("etector.")
   .pauseFor(1000)
   .start();
   </script>
@@ -83,7 +89,11 @@ typewriter
     {{ form }}
     <input type="submit" value="Submit">
 </form>
-
+<div class = "footer">
+  Recent Searches
+  <br>
+  Google | Twitter| Facebook
+</div>
 <div class="col-sm-8">
     {% for image in results %}
         <h2>{{image.data}}</h2>
@@ -94,8 +104,6 @@ typewriter
 </div>
   <br>
     </div>
-    <input type="submit" value="Add Worker Node">
-<input type="submit" value="Delete Worker Node">
   </div>
  </div>
   </body>
