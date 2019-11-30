@@ -25,7 +25,7 @@ def recvfile(filename, addr):
         content=addr.recv(1024)
     f.close()
 
-# sends tasks to workernode and then waits for work
+# sends tasks to workernode(s) and then waits for work
 def task_management(typo, addr):
     msg = bytes(typo, encoding='utf-8')
     addr.send(msg)   # send typo to workernodes
@@ -35,30 +35,13 @@ def task_management(typo, addr):
     recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
-#arg = "messenger.com"  
-# set arguments
-#if len(sys.argv) < 2:
-#    print("[Alert] no website specified.")
-#    print("default value, \"" + arg + "\" set...") # debugging
-#else:
-#    arg = sys.argv[1]
-
-#print("Will now generate typos for \"" + arg + "\" ") # debugging
-# generate typos
-#typos = generateTypos(arg)
-
-#THIS IS WHAT JAMES ADDED
-#os.mkdir(arg)
-#os.mkdir((arg+'/HTML'))
-#os.mkdir((arg+'/IMG'))
-#THIS IS WHAT JAMES ADDED
-
 # server-side connection
 
 connections = []
 socket = []
 threads = []
 running = True
+# accepts new connections from workernode.py
 def handleNewConnections():
     global connections
     global socket
@@ -67,6 +50,7 @@ def handleNewConnections():
         connections.append([connection, addr])
         # print(connections)    # debugging
 
+# closes all threads and then ends program
 def shutdown(sig, frame):
     global threads
     global socket
@@ -78,6 +62,7 @@ def shutdown(sig, frame):
     socket.close()
     sys.exit(0)
 
+# cleans up all threads
 def cleanup():
     global threads
     while True:
@@ -103,7 +88,7 @@ def setupConnections():
     cleanupThread.setDaemon(True)
     cleanupThread.start()
 
-
+# creates a task for each typo that a workernode (workernode.py) can pick up and retrieve the site for
 def gatherTypoSquatSites(arg="google.com"):
     global connections
     global threads
