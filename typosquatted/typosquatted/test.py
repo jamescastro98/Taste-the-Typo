@@ -10,5 +10,5 @@ setupConnections()
 #this begins sending requests to registered worker nodes typos of the given site. this is called to generate
 #results for a new request. you may not whant to recall it if the requested results already exists.
 #but as it stands now there is no clean up for those results.
-gatherTypoSquatSites("www.google.com")
+gatherTypoSquatSites("www.q.com")
 

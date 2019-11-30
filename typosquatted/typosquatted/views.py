@@ -16,8 +16,9 @@ def HomeView(request):
     return render(request, "home.html", {'form':form})
 #    model = Post
 #    context_object_name = "post"
-
+init = True
 def ResultView(request):
+    global init
     if request.method =='POST':
         form = WebForm(request.POST)
         if form.is_valid():
@@ -26,11 +27,14 @@ def ResultView(request):
             # Execute Master + Worker Nodes Here
             # masternode setup -Nathan
             # signal.signal(signal.SIGINT, shutdown)
-            setupConnections()
+            if init:
+                setupConnections()
+                init = False
             gatherTypoSquatSites(input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
-            start_worker()
+            
+            #start_worker()
             #
             #   note: this should only start one worker, 
             #       not sure if we only want X amount of workers or scale it to
