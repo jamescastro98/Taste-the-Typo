@@ -15,7 +15,7 @@ def sendFile(filename, socket):
 def start_worker():
     s = socket.socket()
     port = 6899
-    s.settimeout(10)
+    s.settimeout(None)
     s.connect(('127.0.0.1', port)) # CHANGE TO 10.0.2.2 on VM!
 
     while True:
@@ -26,7 +26,7 @@ def start_worker():
         if(filename!="404"):
             s.send(bytes(filename+".html", encoding='utf-8'))
             sendFile(filename+".html", s)
-            time.sleep(1) #give it a second to process.
+            #time.sleep(1) #give it a second to process.
             
             s.send(bytes(filename+".png", encoding='utf-8'))
             sendFile(filename+".png", s)
@@ -36,6 +36,7 @@ def start_worker():
         # grab next job
         s.close()
         s = socket.socket()
+        s.settimeout(None)
         s.connect(('127.0.0.1', port)) 
         # the way I (Joey) Edited it, I have the master node disconnect after receving data. this is to prevent timeouts
 
