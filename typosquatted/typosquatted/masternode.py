@@ -13,11 +13,11 @@ def preptypo(typo):
     typo = typo.replace("www.","")
     if typo.find("https://", 0, 8)==-1: # checks if https:// is present so it doesn't double dip
         typo = 'https://'+typo
-    print('Prepped '+typo+' to enter test()')   # debugging statement
+    # print('Prepped '+typo+' to enter test()')   # debugging statement: successful prep
     return typo
 
 def recvfile(filename, addr):
-    print("I genuinely don't know what this is supposed to do.")
+    # print("I genuinely don't know what this is supposed to do.")
     f = open("MASTER"+filename,'wb')
     content = addr.recv(1024)
     while(content):
@@ -31,7 +31,7 @@ def task_management(typo, addr):
     addr.send(msg)   # send typo to workernodes
     filename = addr.recv(1024)               # this might not recv all of the data
     filename = filename.decode('utf-8')
-    print("*** \""+filename+"\" recieved from worker")   # debugging
+    # print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
     recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
@@ -65,14 +65,14 @@ def handleNewConnections():
     while True:
         (connection, addr) = socket.accept()
         connections.append([connection, addr])
-        print(connections)
+        # print(connections)    # debugging
 
 def shutdown(sig, frame):
     global threads
     global socket
     global running
     running = False
-    print("shuting down...")
+    # print("shutting down...")  # debugging: about to enter shutdown
     for t in threads:
         t.join()
     socket.close()
@@ -86,8 +86,8 @@ def cleanup():
             if not t.isAlive():
                 t.join()
                 threads = [tr for tr in threads if not tr == t]
-                print(t)
-                print(threads)
+                # print(t)  # debugging
+                # print(threads)    # debugging
 
 def setupConnections():
     global socket
@@ -108,9 +108,9 @@ def gatherTypoSquatSites(arg="google.com"):
     global connections
     global threads
     global running
-    responces = 0
+    # responces = 0
     typos = generateTypos(arg)
-    totaltypos = len(typos)
+    # totaltypos = len(typos)
     for typo in typos:
         msg = typo
         if typo.find("www.", 0, 4) != -1:
