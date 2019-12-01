@@ -1,1 +1,37 @@
-{{ input }}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Taste the typo results</title>
+		<meta charset="UTF-8"/>
+
+		<style>
+		.grid-container {
+  			display: grid;
+  			grid-template-columns: auto auto auto;
+  			padding: 10px;
+		}
+		</style>
+	</head>
+	<body>
+		{{ input }}
+		<div class="grid-container", id = "resultsgrid">
+			<!--<div class="grid-item">demo</div>-->
+
+		</div>
+		<script>
+			var input = {{ input }}; //I hope this works
+			var directory = {{ MEDIA_URL }};
+			var t = setInterval(getResults, 1000);
+			var results = [];
+			 
+			function getResults() {
+				//get all results from DB check them against the results var
+				//then add any new results to the results var and the resultsgrid
+				var indexFile = new XMLHttpRequest();
+				indexFile.open("GET", directory + input + "/index", false)
+			}
+		</script>
+	</body>
+	
+</html>
