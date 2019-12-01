@@ -18,12 +18,33 @@ def preptypo(typo):
 
 def recvfile(filename, addr):
     # print("I genuinely don't know what this is supposed to do.")
-    f = open("MASTER"+filename,'wb')
     content = addr.recv(1024)
+    store=content
     while(content):
-        f.write(content)
         content=addr.recv(1024)
-    f.close()
+        store+=content
+    htmldelim=bytearray('</html>','utf-8')
+    pngdelim=bytearray('.png','utf-8')
+    try:
+        bytarr=store.split(htmldelim,1)
+        htmldoc=bytarr[0].decode('utf-8')
+        #htmldoc+="</html>"
+        rest=bytarr[1]
+        pngarr=rest.split(pngdelim,1)
+        pngname=pngarr[0].decode('utf-8')
+        f = open("MASTER"+filename,'wb')
+        htmldoc=htmldoc+"</html>"
+        print(htmldoc)
+        f.write(htmldoc.encode('utf-8'))
+        f.close()
+        #print(str(pngarr[1]))
+        print(pngname +".png")
+        x=open("MASTER"+(pngname+".png"),'wb')
+        x.write(pngarr[1])
+        x.close()
+    except:
+        amcry=1
+ 
 
 # sends tasks to workernode(s) and then waits for work
 def task_management(typo, addr):
@@ -32,7 +53,8 @@ def task_management(typo, addr):
     filename = addr.recv(1024)               # this might not recv all of the data
     filename = filename.decode('utf-8')
     # print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
-    recvfile(filename, addr)
+    if(filename!="404"):
+        recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
 # server-side connection
