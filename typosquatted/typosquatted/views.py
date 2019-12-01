@@ -23,14 +23,18 @@ def ResultView(request):
         form = WebForm(request.POST)
         if form.is_valid():
             print("Request Gotten!")
-            input = form.data["weburl"]
+            Input = form.data["weburl"]
+            if (Input.startswith("https://")):
+                Input = Input[len("https://"):]
+            if (Input.startswith("http://")):
+                Input = Input[len("http://"):]
             # Execute Master + Worker Nodes Here
             # masternode setup -Nathan
             # signal.signal(signal.SIGINT, shutdown)
             if init:
                 setupConnections()
                 init = False
-            gatherTypoSquatSites(input)    # not too sure what the arg is
+            gatherTypoSquatSites(Input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             
@@ -43,4 +47,4 @@ def ResultView(request):
             #
 
             #time.sleep(5)
-            return render(request, "result.html", {'input':input, 'MEDIA_URL':settings.MEDIA_URL})
+            return render(request, "result.html", {'input':Input, 'MEDIA_URL':settings.MEDIA_URL})

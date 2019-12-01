@@ -57,4 +57,4 @@ def generateTypos(site: str):
     adjacencyFile.close()
     return list(typos)
 
-#print(generateTypos(sys.argv[1]))
+print(generateTypos(sys.argv[1]))
