@@ -1,7 +1,7 @@
 from django.views import generic
 from .forms import WebForm
 from django.shortcuts import render
-
+from django.conf import settings
 from .masternode import setupConnections,gatherTypoSquatSites
 from .workernode import start_worker
 import signal
@@ -30,7 +30,7 @@ def ResultView(request):
             if init:
                 setupConnections()
                 init = False
-            gatherTypoSquatSites(input)    # not too sure what the arg is
+            #gatherTypoSquatSites(input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             
@@ -43,4 +43,4 @@ def ResultView(request):
             #
 
             time.sleep(5)
-            return render(request, "result.html", {'input':input})
+            return render(request, "result.html", {'input':input, 'MEDIA_URL':settings.MEDIA_URL})

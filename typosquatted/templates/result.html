@@ -16,12 +16,12 @@
 	<body>
 		{{ input }}
 		<div class="grid-container", id = "resultsgrid">
-			<!--<div class="grid-item">demo</div>-->
+			<div class="grid-item">demo</div> 
 
 		</div>
 		<script>
-			var input = {{ input }}; //I hope this works
-			var directory = {{ MEDIA_URL }};
+			var input = "{{ input }}"; //I hope this works
+			var directory = "{{ MEDIA_URL }}";
 			var t = setInterval(getResults, 1000);
 			var results = [];
 			 
@@ -29,7 +29,22 @@
 				//get all results from DB check them against the results var
 				//then add any new results to the results var and the resultsgrid
 				var indexFile = new XMLHttpRequest();
-				indexFile.open("GET", directory + input + "/index", false)
+				indexFile.onload = function(){
+					var arr = JSON.parse(this.responseText);
+					displayResults(arr);
+				}
+
+				indexFile.open("GET", directory + input + "/index.json", false)
+				indexFile.send()
+
+			function displayResults(arr) {
+  				var out = "";
+  				var i;
+  				for(i = 0; i < arr.length; i++) {
+    			out += '<div class=\"grid-item\">' + arr[i].text + '</div>';
+  			}
+  			document.getElementById("resultsgrid").innerHTML = out;
+};
 			}
 		</script>
 	</body>
