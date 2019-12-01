@@ -6,6 +6,8 @@ import threading
 import signal
 import time
 
+globalInput =  ""
+
 # adjusts output from typoGenerator.py by:
 #   removing "www." from the string (not sure if needed but is cleaner)
 #   appending "https://" to the typo (webbrowse.py doesn't work otherwise)
@@ -32,14 +34,14 @@ def recvfile(filename, addr):
         rest=bytarr[1]
         pngarr=rest.split(pngdelim,1)
         pngname=pngarr[0].decode('utf-8')
-        f = open("MASTER"+filename,'wb')
+        f = open("./data/" + globalInput + "/" + filename,'wb')
         htmldoc=htmldoc+"</html>"
         print(htmldoc)
         f.write(htmldoc.encode('utf-8'))
         f.close()
         #print(str(pngarr[1]))
         print(pngname +".png")
-        x=open("MASTER"+(pngname+".png"),'wb')
+        x=open("./data/" + globalInput + "/"+(pngname+".png"),'wb')
         x.write(pngarr[1])
         x.close()
     except:
@@ -52,7 +54,7 @@ def task_management(typo, addr):
     addr.send(msg)   # send typo to workernodes
     filename = addr.recv(1024)               # this might not recv all of the data
     filename = filename.decode('utf-8')
-    # print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
+    print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
     if(filename!="404"):
         recvfile(filename, addr)
     addr.close() # now I am expecting the worker node to re establish the connection
@@ -115,6 +117,12 @@ def gatherTypoSquatSites(arg="google.com"):
     global connections
     global threads
     global running
+
+    global globalInput
+    globalInput = arg
+    if not os.path.isdir('./data/{}'.format(arg)):
+      os.makedirs('./data/{}'.format(arg))
+
     # responces = 0
     typos = generateTypos(arg)
     # totaltypos = len(typos)

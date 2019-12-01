@@ -30,7 +30,7 @@ def ResultView(request):
             if init:
                 setupConnections()
                 init = False
-            #gatherTypoSquatSites(input)    # not too sure what the arg is
+            gatherTypoSquatSites(input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             
@@ -42,5 +42,5 @@ def ResultView(request):
             #   note2: also commented out the code just in case I break everything
             #
 
-            time.sleep(5)
+            #time.sleep(5)
             return render(request, "result.html", {'input':input, 'MEDIA_URL':settings.MEDIA_URL})
