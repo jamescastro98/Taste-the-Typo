@@ -6,22 +6,33 @@
 		<meta charset="UTF-8"/>
 
 		<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 		.grid-container {
   			display: grid;
-  			grid-template-columns: auto auto auto;
-  			padding: 10px;
+  			grid-template-columns: auto auto;
 			margin: 0 auto;
 		}
 		.grid-item {
   			padding: 10px;
 			margin-top:10px;
+			height: 600px;
+			width: 700px;
+			overflow: hidden;
 		}
-
+		
+		#app {
+			font-size: 80px;
+			line-height: 75px;
+			font-weight: bold;
+			padding-left:10%;
+			padding-right:10%;
+			padding-top:50px;
+		}
 		.content{
   			margin-top:20px;
   			padding-top:10px;
-  			padding-left:15%;
-  			padding-right:15%;
+  			padding-left:5%;
+  			padding-right:5%;
   			background: rgba(0, 0, 0, 0.6);
   			font-weight:lighter;
 		}
@@ -29,7 +40,7 @@
 		.parallax{
 			background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
 			min-height:1300px; /*should be 100%*/
-			min-width: 100%;
+   			min-width: 100%;
 			/* Create the parallax scrolling effect */
 			background-attachment: fixed;
 			background-position: center;
@@ -46,8 +57,11 @@
 	<body>
 	<div class="parallax">
 	<div align="center">
+	<div id="app">
+	Results for {{ input }}
+</div>
 	<div class="content">
-		{{ input }}
+		To View the HTML Bodies of the respective websites, please click on the respective image.
 		<div class="grid-container", id = "resultsgrid">
 			<div class="grid-item">Loading...</div> 
 
@@ -76,7 +90,7 @@
   				var i;
   				for(i = 0; i < arr.length; i++) {
 				if (arr[i] != ""){
-    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" style="width:30%;height:30%;overflow:hidden ></div>';
+    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" ></div>';
 				}
 			}
   			document.getElementById("resultsgrid").innerHTML = out;

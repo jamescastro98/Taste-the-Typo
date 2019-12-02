@@ -18,7 +18,7 @@ def fetchURL(URL:str):
             # print(imgName)    # debugging
             await page.setViewport({'width': 1366,'height': 768})
             await page.goto(URL) #change this to website passed in.
-            await page.screenshot({'path':name+'.png'})
+            await page.screenshot({'path':name+'.png','fullPage' : False})
             st= await page.content()
             f = open(name +".html", "w") #need to make an array of files to dump them at.
             f.write(st)
