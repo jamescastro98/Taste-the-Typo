@@ -126,9 +126,10 @@ def gatherTypoSquatSites(arg="google.com"):
     globalInput = arg
     if not os.path.isdir('./data/{}'.format(arg)):
       os.makedirs('./data/{}'.format(arg))
-      siteTracker=open("index.txt",'a')
-      siteTracker.write(arg)
-      siteTracker.close
+      #siteTracker=open("/data/{}/index.txt".format(arg),'a')
+      #siteTracker.write(arg)
+      #siteTracker.close
+      os.mknod("./data/{}/index.txt".format(arg))
     # responces = 0
     typos = generateTypos(arg)
     # totaltypos = len(typos)

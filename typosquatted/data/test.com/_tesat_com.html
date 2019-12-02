@@ -1,0 +1,2716 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="g-offcanvas-css3 uk-notouch"><head><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+
+                <link rel="icon" type="image/x-icon" href="/images/system/192x192.png">
+        
+                <link rel="apple-touch-icon" sizes="180x180" href="/images/system/192x192.png">
+        <link rel="icon" sizes="192x192" href="/images/system/192x192.png">
+            
+    <meta charset="utf-8">
+	<base href="http://www.tesat.de/en/">
+	<meta name="keywords" content="tesat, spacecom, laser, lct, sub system, payload, satellite, cubesats, telecommunication, navigation, earth observation, science, space, ">
+	<meta name="description" content="Tesat is market leader in the field of telecommunication payloads for satellites and technology leader in the field of laser communications.">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>TESAT</title>
+	<link href="http://www.tesat.de/de/" rel="alternate" hreflang="de">
+	<link href="http://www.tesat.de/en/" rel="alternate" hreflang="en">
+	<link href="/plugins/system/jcemediabox/css/jcemediabox.css?1d12bb5a40100bbd1841bfc0e498ce7b" rel="stylesheet">
+	<link href="/plugins/system/jcemediabox/themes/standard/css/style.css?50fba48f56052a048c5cf30829163e4d" rel="stylesheet">
+	<link href="/media/mod_languages/css/template.css" rel="stylesheet">
+	<link href="/media/gantry5/assets/css/lightcase.css" rel="stylesheet">
+	<link href="/media/gantry5/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/media/gantry5/engines/nucleus/css-compiled/nucleus.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/css-compiled/hydrogen_85.css" rel="stylesheet">
+	<link href="/media/gantry5/assets/css/bootstrap-gantry.css" rel="stylesheet">
+	<link href="/media/gantry5/engines/nucleus/css-compiled/joomla.css" rel="stylesheet">
+	<link href="/media/jui/css/icomoon.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/css-compiled/hydrogen-joomla_85.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/css-compiled/custom_85.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/uikit/css/uikit.min.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/fonts/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/fonts/typicons/typicons.min.css" rel="stylesheet">
+	<link href="/templates/g5_hydrogen/custom/css/hover.min.css" rel="stylesheet">
+	<style>
+div.mod_search237 input[type="search"]{ width:auto; }
+
+div.mod_search238 input[type="search"]{ width:auto; }
+        #g-navigation.g-fixed-active {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1003;
+            left: 0;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .animated {
+          -webkit-transition: transform 200ms linear;
+          -moz-transition: transform 200ms linear;
+          -ms-transition: transform 200ms linear;
+          -o-transition: transform 200ms linear;
+          transition: transform 200ms linear;
+        }
+
+        .slideDown {
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%);
+        }
+
+        .slideUp {
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+          -o-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+
+        .animated {
+          -webkit-animation-duration: 0.5s;
+          -moz-animation-duration: 0.5s;
+          -ms-animation-duration: 0.5s;
+          -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+          -webkit-animation-fill-mode: both;
+          -moz-animation-fill-mode: both;
+          -ms-animation-fill-mode: both;
+          -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes slideDown {
+            0% {
+                -webkit-transform: translateY(-100%);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes slideDown {
+            0% {
+                -moz-transform: translateY(-100%);
+            }
+
+            100% {
+                -moz-transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes slideDown {
+            0% {
+                -o-transform: translateY(-100%);
+            }
+
+            100% {
+                -o-transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .animated.slideDown {
+            -webkit-animation-name: slideDown;
+            -moz-animation-name: slideDown;
+            -o-animation-name: slideDown;
+            animation-name: slideDown;
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                -webkit-transform: translateY(0);
+            }
+
+            100% {
+                -webkit-transform: translateY(-100%);
+            }
+        }
+
+        @-moz-keyframes slideUp {
+            0% {
+                -moz-transform: translateY(0);
+            }
+
+            100% {
+                -moz-transform: translateY(-100%);
+            }
+        }
+
+        @-o-keyframes slideUp {
+            0% {
+                -o-transform: translateY(0);
+            }
+
+            100% {
+                -o-transform: translateY(-100%);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .animated.slideUp {
+            -webkit-animation-name: slideUp;
+            -moz-animation-name: slideUp;
+            -o-animation-name: slideUp;
+            animation-name: slideUp;
+        }
+
+        @-webkit-keyframes swingInX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(-90deg);
+            }
+            
+            100% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+            }
+        }
+
+        @-moz-keyframes swingInX {
+            0% {
+                -moz-transform: perspective(400px) rotateX(-90deg);
+            }
+
+            100% {
+                -moz-transform: perspective(400px) rotateX(0deg);
+            }
+        }
+
+        @-o-keyframes swingInX {
+            0% {
+                -o-transform: perspective(400px) rotateX(-90deg);
+            }
+            
+            100% {
+                -o-transform: perspective(400px) rotateX(0deg);
+            }
+        }
+
+        @keyframes swingInX {
+            0% {
+                transform: perspective(400px) rotateX(-90deg);
+            }
+            
+            100% {
+                transform: perspective(400px) rotateX(0deg);
+            }
+        }
+
+        .animated.swingInX {
+            -webkit-transform-origin: top;
+            -moz-transform-origin: top;
+            -ie-transform-origin: top;
+            -o-transform-origin: top;
+            transform-origin: top;
+          
+            -webkit-backface-visibility: visible !important;
+            -webkit-animation-name: swingInX;
+            -moz-backface-visibility: visible !important;
+            -moz-animation-name: swingInX;
+            -o-backface-visibility: visible !important;
+            -o-animation-name: swingInX;
+            backface-visibility: visible !important;
+            animation-name: swingInX;
+        }
+
+        @-webkit-keyframes swingOutX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+            }
+          100% {
+                -webkit-transform: perspective(400px) rotateX(-90deg);
+            }
+        }
+
+        @-moz-keyframes swingOutX {
+            0% {
+                -moz-transform: perspective(400px) rotateX(0deg);
+            }
+          100% {
+                -moz-transform: perspective(400px) rotateX(-90deg);
+            }
+        }
+
+        @-o-keyframes swingOutX {
+            0% {
+                -o-transform: perspective(400px) rotateX(0deg);
+            }
+          100% {
+                -o-transform: perspective(400px) rotateX(-90deg);
+            }
+        }
+
+        @keyframes swingOutX {
+            0% {
+                transform: perspective(400px) rotateX(0deg);
+            }
+          100% {
+                transform: perspective(400px) rotateX(-90deg);
+            }
+        }
+
+        .animated.swingOutX {
+            -webkit-transform-origin: top;
+            -webkit-animation-name: swingOutX;
+            -webkit-backface-visibility: visible !important;
+            -moz-animation-name: swingOutX;
+            -moz-backface-visibility: visible !important;
+            -o-animation-name: swingOutX;
+            -o-backface-visibility: visible !important;
+            animation-name: swingOutX;
+            backface-visibility: visible !important;
+        }
+
+        @-webkit-keyframes flipInX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+            
+            100% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes flipInX {
+            0% {
+                -moz-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+
+            100% {
+                -moz-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes flipInX {
+            0% {
+                -o-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+            
+            100% {
+                -o-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flipInX {
+            0% {
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+            
+            100% {
+                transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        .animated.flipInX {
+            -webkit-backface-visibility: visible !important;
+            -webkit-animation-name: flipInX;
+            -moz-backface-visibility: visible !important;
+            -moz-animation-name: flipInX;
+            -o-backface-visibility: visible !important;
+            -o-animation-name: flipInX;
+            backface-visibility: visible !important;
+            animation-name: flipInX;
+        }
+
+        @-webkit-keyframes flipOutX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+          100% {
+                -webkit-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes flipOutX {
+            0% {
+                -moz-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+          100% {
+                -moz-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes flipOutX {
+            0% {
+                -o-transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+          100% {
+                -o-transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes flipOutX {
+            0% {
+                transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+          100% {
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+        }
+
+        .animated.flipOutX {
+            -webkit-animation-name: flipOutX;
+            -webkit-backface-visibility: visible !important;
+            -moz-animation-name: flipOutX;
+            -moz-backface-visibility: visible !important;
+            -o-animation-name: flipOutX;
+            -o-backface-visibility: visible !important;
+            animation-name: flipOutX;
+            backface-visibility: visible !important;
+        }
+
+        @-webkit-keyframes bounceInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-200px);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translateY(30px);
+            }
+
+            80% {
+                -webkit-transform: translateY(-10px);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes bounceInDown {
+            0% {
+                opacity: 0;
+                -moz-transform: translateY(-200px);
+            }
+
+            60% {
+                opacity: 1;
+                -moz-transform: translateY(30px);
+            }
+
+            80% {
+                -moz-transform: translateY(-10px);
+            }
+
+            100% {
+                -moz-transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes bounceInDown {
+            0% {
+                opacity: 0;
+                -o-transform: translateY(-200px);
+            }
+
+            60% {
+                opacity: 1;
+                -o-transform: translateY(30px);
+            }
+
+            80% {
+                -o-transform: translateY(-10px);
+            }
+
+            100% {
+                -o-transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-200px);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translateY(30px);
+            }
+
+            80% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .animated.bounceInDown {
+            -webkit-animation-name: bounceInDown;
+            -moz-animation-name: bounceInDown;
+            -o-animation-name: bounceInDown;
+            animation-name: bounceInDown;
+        }
+
+        @-webkit-keyframes bounceOutUp {
+            0% {
+                -webkit-transform: translateY(0);
+            }
+
+            30% {
+                opacity: 1;
+                -webkit-transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(-200px);
+            }
+        }
+
+        @-moz-keyframes bounceOutUp {
+            0% {
+                -moz-transform: translateY(0);
+            }
+
+            30% {
+                opacity: 1;
+                -moz-transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 0;
+                -moz-transform: translateY(-200px);
+            }
+        }
+
+        @-o-keyframes bounceOutUp {
+            0% {
+                -o-transform: translateY(0);
+            }
+
+            30% {
+                opacity: 1;
+                -o-transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 0;
+                -o-transform: translateY(-200px);
+            }
+        }
+
+        @keyframes bounceOutUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            30% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200px);
+            }
+        }
+
+        .animated.bounceOutUp {
+            -webkit-animation-name: bounceOutUp;
+            -moz-animation-name: bounceOutUp;
+            -o-animation-name: bounceOutUp;
+            animation-name: bounceOutUp;
+        }
+        
+            #g-navigation.g-fixed-element {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1003;
+            }
+        
+dt.article-info-term {
+  display: none;
+}
+ 
+dl.article-info dd {
+  margin-left: 0;
+}
+.g-offcanvas-toggle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+#g-navigation a {
+    color: rgba(0, 64, 112, 0.5);
+}
+.g-gadgets .g-gadget-buttons {
+    position: fixed;
+    top: 40%;
+    right: 0px;
+    left: initial;
+    background: rgba(255,255,255,0.75);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+.g-gadgets .g-gadget-buttons > div > a {
+	padding: 14px;
+	display: block;
+	line-height: 1;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	color: #797979;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.uk-modal-dialog {
+	background: rgba(0,64,112,0.9);
+}
+
+div.mod-languages a {
+        color: rgba(255, 255, 255, 0.9);
+	padding: 40%;
+}
+
+.uk-modal-dialog > :last-child:not([class*="uk-modal-"]) {
+	margin-bottom: 0;
+	line-height: 3;
+}
+#g-navigation .g-main-nav .g-toplevel > li.active.g-selected:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
+	background: #fff;
+}
+
+#g-navigation .g-main-nav .g-dropdown {
+	background: rgba(121, 121, 121, 0.5);
+}
+
+#g-navigation .g-main-nav .g-toplevel>li:hover:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
+	background:  #fff;
+}
+
+.hvr-underline-from-center::before, .hvr-underline-from-left::before {
+	background: #004070;
+	height: 4px;
+}
+.g-onepage-menu ul {
+	margin: 0;
+        paddding: 0;
+	list-style: none;
+	background: rgba(255,255,255,0.9);
+	color: #fff;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.g-onepage-menu ul li.uk-active > a {
+	background: rgba(0,64,112,0.9);
+	color: #fff;
+}
+#content-justify
+
+{
+text-align: justify;
+hyphens: auto;
+}
+#image-resize2
+
+.uk-cover-background {
+	background-position: 50% 10%;
+	background-size: inherit;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#onepage-position
+{
+position: absolute;
+top: 3%;
+right: 0%;
+left: 0%;
+}
+
+.size-12 {
+	flex: 0 15%;
+	width: 15%;
+}
+#text-color
+a {
+color: rgba(0, 64, 112, 0.9);
+}
+#icons
+
+.uk-overlay-panel {
+	padding: 5px;
+}
+#berichte
+
+{
+	height: 530px;
+}
+.uk-accordion-title {
+	background: rgba(0,64,112,0.75);
+	border: 0;
+        margin: 1px;
+	border-radius: 0;
+	color: #fff;
+}
+#table-border
+
+td {
+	border: 0px;
+}
+.g-features-particle {
+	text-align: left;
+}
+
+.g-features-particle.style7 .g-features-particle-icon {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+#overlay
+.uk-overlay-background {
+    background: rgba(0,0,0,.5);
+}
+#logo-resize
+
+img {
+	height: 45px;
+}
+.g-onepage-nav.style2 .g-onepage-nav-item.uk-active > a {
+	color: rgba(0, 64, 112, 0.75);
+}
+
+.g-onepage-nav.style2 .g-onepage-nav-item a {
+	line-height: 30px;
+	font-size: 1.2rem;
+	text-align: center;
+	color: rgba(121,121,121,0.75);
+}
+
+a {
+	color: rgba(121, 121, 121, 0.75);
+}
+#header-search .search input {
+	height: 50px;
+}
+#menufont
+
+.g-main-nav .g-toplevel {
+	font-variant: small-caps;
+	font-size: large;
+	justify-content: left;
+}
+
+#boxlineright
+
+{
+	box-shadow: 7px 0px 1px -6px rgba(121, 121, 121, 0.25);
+}
+#boxlineright2
+
+{
+	box-shadow: 7px 0px 1px -6px rgba(121, 121, 121, 0.25);
+}
+
+.g-gadgets #modal-search .uk-modal-dialog .search input {
+	height: 100%;
+}
+#hyphens
+{
+hyphens: auto;
+}
+#overgold
+.uk-overlay-background {
+    background: rgba(218,165,32,0.5);
+}
+.g-container
+
+{
+	background: rgba(0,0,0,0);
+	padding: 0px;
+}
+
+#g-grid
+{
+	box-shadow: 10px 10px 10px rgba(121,121,121,0.25);
+}
+
+#g-navigation > div:nth-child(1)
+
+{
+	box-shadow: 0px 0px 0px 0px;
+}
+
+#g-page-surround {
+	background: #fff;
+}
+
+#g-segment-1a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-1b > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-1c > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-2a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-3a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-4a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-5a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-6a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-7a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-segment-8a > div:nth-child(1)
+{
+	background: rgba(255,255,255,0);
+	box-shadow: 0px 0px 0px;
+}
+
+#g-navigation > div:nth-child(1)
+
+{
+	background: #fff;
+}
+.breadcrumbs {
+	font-variant-caps: petite-caps;
+	padding: 0px 5px 0px 5px;
+	box-shadow: 0px 1px 0px #eee;
+}
+#g-offcanvas #g-mobilemenu-container ul > li:hover:not(.g-menu-item-type-particle):not(.g-menu-item-type-module), #g-offcanvas #g-mobilemenu-container ul > li.active:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
+	background: rgba(240,240,240, 0.5); 
+
+}
+
+#g-mobilemenu-container
+
+{
+	font-variant: petite-caps;
+}
+
+#g-offcanvas #g-mobilemenu-container ul {
+	background: #797979;
+}
+
+#g-offcanvas
+
+{
+	background: #797979;
+}
+
+#g-offcanvas #g-mobilemenu-container ul > li > .g-menu-item-container {
+	color: #fff;
+}
+
+#g-offcanvas #g-mobilemenu-container ul > li:hover:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) > .g-menu-item-container, #g-offcanvas #g-mobilemenu-container ul > li.active:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) > .g-menu-item-container {
+	color: #797979;
+}
+.g-toplevel
+
+{
+	height: 82px;
+}
+#footer-hover
+
+[class^="hvr-"] {
+	background: #fff;
+}
+.g-gadgets .g-gadget-buttons > div:last-child > a {
+	border-bottom-left-radius: 10px;
+}
+
+
+.g-gadgets .g-gadget-buttons > div:first-child > a {
+	border-top-left-radius: 10px;
+}
+
+
+[class^="hvr-"] {
+	margin: 0em;
+	padding: 0em;
+	background: rgba(0,0,0,0);
+}
+#slider-back
+
+.uk-overlay-active .uk-active > .uk-overlay-fade, .uk-overlay-hover.uk-hover .uk-overlay-fade, .uk-overlay-hover:hover .uk-overlay-fade {
+	opacity: 1;
+	background: rgba(0,64,112,0);
+	margin: 25px;
+}
+
+
+#slider-back
+li.uk-active:nth-child(1) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(2) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(3) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(4) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(5) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(6) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(7) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0, 64, 112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+#slider-back
+li.uk-active:nth-child(8) > div:nth-child(3) > h3:nth-child(1)
+
+{
+	margin: 0 0 15px;
+	color: #fff !important;
+	background: rgba(0,64,112,.5);
+	padding: 5px 10px 5px 10px;
+        font-size: 30px;
+}
+
+.uk-dotnav > * > * {
+	width: 5px;
+	height: 5px;
+}
+
+.g-animated-counter .g-animated-counter-icon {
+	border-radius: 50%;
+	font-size: 150px;
+	height: 110px;
+	width: 100%;
+	line-height: 110px;
+	border: 0px solid;
+	border-color: inherit;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 35px;
+	display: inline-block;
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+	margin-top: -130px;
+	padding-top: 80px;
+	color: rgba(255,255,255,0);
+}
+
+.g-animated-counter .g-animated-counter-title {
+	margin-bottom: -23px;
+	font-size: 120%;
+	margin-top: -10px;
+	color: #797979;
+}
+
+.g-animated-counter .g-animated-counter-number {
+	font-size: 180%;
+	margin-bottom: 0;
+	margin-top: -51px;
+	color: #004070;
+}
+.rev_slider img {
+	border: solid 1px;
+	box-shadow: 3px 3px 3px #000;
+	border-color: #fff;
+}
+div.mod-languages ul {
+	margin-top: -15px;
+	margin-left: -10px;
+	font-variant: sub;
+}
+#g-navigation {
+	height: 82px;
+}
+
+#g-navigation > div:nth-child(1) {
+	height: 82px;
+}
+
+#newlogo
+
+{
+	margin-top: -15px;
+}
+#events
+.g-article-date {
+	background: rgba(255,255,255,.85);
+	padding: 5px;
+	box-shadow: 3px 3px 3px #000;
+	color: #606060;
+}
+
+#events
+.g-info-container {
+	padding-left: 10px;
+}
+
+#events
+.g-article-details {
+	padding-bottom: 15px !important;
+}
+
+#events
+.g-news-pro .g-news-pro-item.vertical .g-news-pro-image, .g-news-pro .g-news-pro-link.vertical .g-news-pro-image {
+	margin-bottom: -75px;
+}
+
+#events
+.g-news-pro .g-news-pro-item .g-news-pro-title, .g-news-pro .g-news-pro-link .g-news-pro-title {
+	background: rgba(255,255,255,.85);
+	box-shadow: 3px 3px 3px #000;
+	padding: 0px 0px 0px 5px;
+	margin-right: 50px;
+}
+
+#events
+.g-news-pro .g-news-pro-item.vertical .g-news-pro-image, .g-news-pro .g-news-pro-link.vertical .g-news-pro-image {
+	margin-bottom: -105px;
+	background-position-y: 0;
+}
+
+#events
+.g-news-pro .g-news-pro-item .g-news-pro-desc, .g-news-pro .g-news-pro-link .g-news-pro-desc {
+	margin-top: -18px;
+}
+
+#events
+.g-news-pro-desc {
+	background: rgba(255,255,255,.85);
+	color: #fff !important;
+	padding: 0px 5px 0px 5px;
+	box-shadow: 3px 3px 3px #000;
+	margin-right: 203px;
+}
+
+#events
+.g-news-pro-image image-fullwidth {
+		background-position-y: 0px;
+}
+
+#events
+
+.g-news-pro .uk-grid + .uk-grid {
+	padding-top: 0px;
+	margin-top: 14px;
+}
+
+#events
+.g-news-pro .uk-slidenav-position .g-news-pro-nav {
+	top: -50px;
+}
+.g-top-news .g-top-news-item-info .g-article-text {
+	font-weight: 500;
+}
+
+.g-top-news .g-top-news-item-info .g-article-title a {
+	color: #fff;
+}
+
+.g-top-news .g-top-news-item-info .g-article-title {
+	color: #fff;
+	margin: 15px 30px 10px -10px;
+	font-weight: 500;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0);
+	background: rgba(0,58,128,.5);
+	padding: 5px;
+	box-shadow: 3px 3px 3px #000;
+}
+
+.g-top-news .g-top-news-item-info .g-article-details > span:last-child {
+	color: #fff;
+	background: rgba(0,64,112,.5);
+	box-shadow: 3px 3px 3px #000;
+	padding: 5px;
+	margin: 10px 30px 0px -10px;
+}
+
+.g-top-news .g-top-news-item-info .g-article-details {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 0.7rem;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0);
+}
+#cvacs
+{
+	text-align: justify;
+	hyphens: auto;
+}
+
+#cvacs
+div.g-portfolio-item-container
+
+{
+	background: rgba(0, 126, 182, 0.5);
+	color: #fff;
+	padding: 5px 15px 5px 5px;
+	margin: 5px;
+        border: 1px solid rgba(0, 126, 182, 0.85);
+}
+
+#cvacs
+a {
+	color: #fff !important;
+}
+#custom-4410-particle {
+	margin-left: -5px;
+}
+
+#custom-6891-particle {
+	margin-left: -5px;
+}
+
+.g-top-news-container {
+	margin-right: -5px;
+}
+.uk-overlay-background {
+	background: transparent;
+}
+
+.g-slideshow-title {
+	background: rgba(0,64,112,.5);
+	padding: 5px;
+	box-shadow: 3px 3px 3px #000;
+}
+
+.g-slideshow-desc {
+	background: rgba(0,64,112,.5);
+	padding: 5px;
+	box-shadow: 3px 3px 3px #000;
+	font-variant: small-caps;
+}
+
+#g-tile08 
+
+{
+	margin-left: -10px;
+	margin-right: -5px;
+}
+#g-tile06 {
+	margin-right: -15px;
+}
+
+
+#g-tile07 {
+	margin-left: -5px;
+	margin-right: -10px;
+}
+
+#whiteout
+a {
+	color: #fff;
+}
+#custom-9920-particle {
+	margin-left: -5px;
+}
+
+#social3
+
+img {
+	width: auto;
+	height: 100%;
+	margin-left: -15px;
+}
+
+#g-tile10 {
+	margin-right: -15px;
+}
+#g-slider {
+	background-image: url(/images/mainpages/slider/fields/fields_space_background.jpg);
+	background-size: cover;
+}
+
+
+#newslider
+
+img {
+	border: 1px solid #fff;
+	box-shadow: 3px 3px 3px #000;
+	max-height: 400px;
+}
+
+#newslider
+
+h4 {
+	background: #fff;
+	box-shadow: 3px 3px 3px #000;
+	max-width: 250px;
+}
+
+#newslider
+
+h1 {
+	color: #fff;
+	text-shadow: 3px 3px 3px #000;
+}
+
+#g-title {
+	padding-top: 10px;
+}
+#slideshow-6117-particle
+{
+margin-left: -5px;
+margin-right: 25px;
+}
+
+			#header-search {
+				background: #ffffff;
+			}
+
+			#header-search .search input, #header-search .uk-close {
+				color: #003a80;
+			}
+
+			#header-search .uk-close:hover {
+				color: #003a80;
+			}
+		
+            @media (min-width: 1100px) {
+                .g-offcanvas-toggle {
+                    display: none;
+                }
+            }
+        
+            .g-gadgets #modal-login .uk-modal-dialog {
+                width: 90%;
+            }
+        
+            
+            
+            
+            
+                            .g-inline_2010465710.style1 .g-top-news-main, .g-inline_2010465710.style1 .g-top-news-secondary, .g-inline_2010465710.style2 .g-top-news-main, .g-inline_2010465710.style3 .g-top-news-main, .g-inline_2010465710.style3 .g-top-news-secondary {
+                    width: 33.3333%;
+                }
+
+                .g-inline_2010465710.style2 .g-top-news-secondary, .g-inline_2010465710.style3 .g-top-news-secondary.g-tn2 {
+                    width: 66.6666%;
+                }
+                    
+	</style>
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/media/jui/js/jquery.min.js?732055faae8f6c1443d63faa560d4622"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?732055faae8f6c1443d63faa560d4622"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?732055faae8f6c1443d63faa560d4622"></script>
+	<script src="/media/jui/js/bootstrap.min.js?732055faae8f6c1443d63faa560d4622"></script>
+	<script src="/plugins/system/jcemediabox/js/jcemediabox.js?0c56fee23edfcb9fbdfe257623c5280e"></script>
+	<!--[if lt IE 9]><script src="/media/system/js/html5fallback.js?732055faae8f6c1443d63faa560d4622"></script><![endif]-->
+	<script>
+JCEMediaBox.init({popup:{width:"",height:"",legacy:0,lightbox:0,shadowbox:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",close:2,labels:{'close':'Close','next':'Next','previous':'Previous','cancel':'Cancel','numbers':'{$current} of {$total}'},cookie_expiry:"",google_viewer:0},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/",imgpath:"plugins/system/jcemediabox/img",theme:"standard",themecustom:"",themepath:"plugins/system/jcemediabox/themes",mediafallback:0,mediaselector:"audio,video"});
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-81725762-1', 'auto');
+            ga('send', 'pageview');
+    
+	</script>
+	<link href="http://www.tesat.de/en/" rel="alternate" hreflang="x-default">
+
+    <!--[if (gte IE 8)&(lte IE 9)]>
+        <script type="text/javascript" src="/media/gantry5/assets/js/html5shiv-printshiv.min.js"></script>
+        <link rel="stylesheet" href="/media/gantry5/engines/nucleus/css/nucleus-ie9.css" type="text/css"/>
+        <script type="text/javascript" src="/media/gantry5/assets/js/matchmedia.polyfill.js"></script>
+        <![endif]-->
+                        <meta name="theme-color" content="#004070">
+
+<meta name="msapplication-navbutton-color" content="#004070">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="/images/system/192x192.png">
+
+<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#ffffff",
+      "text": "#797979"
+    },
+    "button": {
+      "background": "#004070",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "href": "/privacy"
+  }
+})});
+</script>
+                
+<style></style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/39/1/infowindow.js"></script></head>
+
+    <body class="gantry site com_gantry5 view-custom no-layout no-task dir-ltr itemid-600 outline-85 g-offcanvas-right g-homemain20174 g-style-preset1"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-edgeless cc-bottom cc-color-override-1334834907 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies to ensure you get the best experience on our website. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="/privacy" target="_blank">Learn more</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Got it!</a></div><!--googleon: all--></div>
+        <!--?php include_once("analyticstracking.php") ?-->
+                    
+
+        <div id="g-offcanvas" data-g-offcanvas-swipe="0" data-g-offcanvas-css3="1" style="">
+                        <div class="g-grid">                        
+
+        <div class="g-block size-100 visible-phone">
+             <div id="mobile-menu-1277-particle" class="g-content g-particle">            <div id="g-mobilemenu-container" data-g-menu-breakpoint="1100px"><ul class="g-toplevel">
+                                                
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-601 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/company">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Company</span>
+            
+                    </span>
+                                                </a>
+                                        </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-602 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/fields-of-activity">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Fields of Activity</span>
+            
+                    </span>
+                                                </a>
+                                        </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-648 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/portfolio">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Portfolio</span>
+            
+                    </span>
+                                                </a>
+                                        </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-658 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/laser">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Laser Communications</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-603 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/career-center">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Career</span>
+            
+                    </span>
+                                                </a>
+                                        </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-604 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/media-center">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Media</span>
+            
+                    </span>
+                                                </a>
+                                        </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-component g-menu-item-647 g-standard  hvr-underline-from-left">
+            <a class="g-menu-item-container" href="/en/contact" title="Contact">
+                                                                <span class="g-menu-item-content">
+                                    <span class="g-menu-item-title">Contact</span>
+            
+                    </span>
+                                                </a>
+                                </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-particle g-menu-item---particle-828gl g-standard  ">
+            <div class="g-menu-item-container" data-g-menuparent="">                                                                                        <div class="menu-item-particle hidden-phone">
+        
+	<a id="header-search-toggle" href="/"><i class="fa fa-search"></i></a>
+
+	
+
+    </div>
+
+                                                                        </div>                    </li>
+    
+                                                                                                        
+        <li class="g-menu-item g-menu-item-type-particle g-menu-item---module-T3HZX g-standard  ">
+            <div class="g-menu-item-container" data-g-menuparent="">                                                                                        <div class="menu-item-particle hidden-phone">
+            <div class="platform-content"><div class="moduletable ">
+						<div class="mod-languages">
+
+	<ul class="lang-block">
+						<li class="" dir="ltr">
+			<a href="/de/">
+							DE						</a>
+			</li>
+								<li class="lang-active" dir="ltr">
+			<a href="/en/">
+							EN						</a>
+			</li>
+				</ul>
+
+</div>
+		</div></div>
+    </div>
+
+                                                                        </div>                    </li>
+    
+                                
+                                
+                                
+                                
+                                
+    
+        </ul></div>
+            </div>
+        </div>
+            </div>
+    </div>
+        <div id="g-page-surround"><div class="g-menu-overlay"></div><div class="g-nav-overlay" data-offcanvas-close=""></div>
+            <div class="g-offcanvas-toggle" role="navigation" data-offcanvas-toggle="" aria-controls="g-offcanvas" aria-expanded="false"><i class="fa fa-fw fa-bars"></i></div>                        
+
+                                            
+                <div class="g-fixed-container" style="height: 82px;"><div class="g-fixed-container" style="height: 82px;"><section id="g-navigation" class="hidden-phone animated headroom--top" style="">
+                <div class="g-container"><div id="header-search" class="" style="height: 82px; line-height: 82px;">
+		<div class="g-block">
+			<div class="g-content">
+				<a class="uk-close" style="top: 31px;"></a>
+											<div class="moduletable">
+						<div class="search mod_search237">
+	<form action="/en/" method="post" class="form-inline" role="search">
+		<label for="mod-search-searchword237" class="element-invisible">Search</label> <input name="searchword" id="mod-search-searchword237" maxlength="200" class="inputbox search-query input-medium" type="search" size="30" placeholder="Search">		<input type="hidden" name="task" value="search">
+		<input type="hidden" name="option" value="com_search">
+		<input type="hidden" name="Itemid" value="600">
+	</form>
+</div>
+		</div>
+	
+				
+							</div>
+		</div>
+	</div>                                <div class="g-grid">                        
+
+        <div id="newlogo" class="g-block size-20 center nomarginbottom nopaddingbottom nopaddingtop">
+             <div id="logo-3432-particle" class="g-content g-particle">            <a href="/" target="_self" title="" aria-label="" rel="home">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="368.504px" height="85.04px" viewBox="0 0 368.504 85.04" enable-background="new 0 0 368.504 85.04" xml:space="preserve">
+<g>
+	<path fill="#004070" d="M82.241,34.03c-0.769-3.027-1.97-5.978-3.604-8.768c-2.407,3.178-5.893,6.576-10.238,10.042
+		C55.466,45.622,36.874,54.292,19.433,58.909c0.339,0.61,0.705,1.215,1.087,1.811c16.607-2.778,34.684-9.551,48.521-17.088
+		C75.139,40.306,79.52,37.071,82.241,34.03z M72.987,18.03c-1.743-1.699-3.633-3.185-5.637-4.443
+		c-1.75,2.831-4.053,5.863-6.839,9.021C49.746,34.808,33.315,46.397,17.2,53.982c0.208,0.575,0.43,1.149,0.669,1.718
+		c15.327-5.703,31.179-15.149,43.038-24.608C67.034,26.203,71.025,21.807,72.987,18.03z M75.689,49.079
+		c-14.686,8-34.769,13.334-52.896,14.789c11.59,14.309,32.541,16.846,47.215,5.547c8.141-6.264,12.654-15.486,13.216-24.99
+		C81.022,45.987,78.502,47.545,75.689,49.079z M52.401,19.761c3.152-3.574,5.552-6.83,7.245-9.748
+		c-10.289-3.295-21.972-1.655-31.18,5.434c-10.979,8.449-15.369,22.273-12.34,34.927C29.599,42.148,42.8,30.642,52.401,19.761z"></path>
+	<g>
+		<path fill="#004070" d="M112.778,67.131V26.91H94.28v-8.511h45.511v8.511h-18.496v40.221H112.778z"></path>
+		<path fill="#004070" d="M145.425,67.131V18.399h43.505v8.511h-35.063v31.711h35.129v8.51H145.425z M160.107,45.95v-7.168h27.014
+			v7.168H160.107z"></path>
+		<path fill="#004070" d="M196.3,67.131v-8.51h36.537c2.272,0,4.031-0.586,5.254-1.744c1.23-1.164,1.846-2.707,1.846-4.625
+			c0-2.101-0.615-3.678-1.846-4.731c-1.223-1.045-2.981-1.571-5.254-1.571h-22.395c-2.275,0-4.342-0.35-6.196-1.037
+			c-1.854-0.689-3.419-1.654-4.695-2.886c-1.275-1.23-2.256-2.69-2.948-4.389c-0.688-1.697-1.039-3.553-1.039-5.568
+			c0-1.964,0.325-3.78,0.971-5.457c0.645-1.675,1.611-3.122,2.884-4.323c1.271-1.208,2.846-2.156,4.726-2.854
+			c1.874-0.689,4.022-1.038,6.434-1.038h34.997v8.511h-34.997c-1.965,0-3.485,0.528-4.561,1.58
+			c-1.065,1.044-1.608,2.514-1.608,4.389c0,1.876,0.551,3.33,1.647,4.359c1.097,1.025,2.579,1.543,4.455,1.543h22.325
+			c4.957,0,8.723,1.158,11.291,3.485c2.57,2.319,3.856,5.851,3.856,10.585c0,2.063-0.316,3.96-0.947,5.701
+			c-0.62,1.744-1.563,3.25-2.809,4.525c-1.251,1.272-2.824,2.268-4.73,2.98c-1.898,0.718-4.122,1.072-6.662,1.072H196.3V67.131z"></path>
+		<path fill="#004070" d="M303.015,67.131l-7.307-12.271h-23.062l4.025-6.903h14.95l-10.864-18.229l-22.116,37.402h-9.718
+			l28.015-46.657c0.49-0.843,1.072-1.517,1.741-2.007c0.672-0.489,1.479-0.735,2.414-0.735c0.939,0,1.733,0.247,2.38,0.735
+			c0.65,0.491,1.221,1.164,1.708,2.007l28.089,46.657H303.015z"></path>
+		<path fill="#004070" d="M325.473,67.131V26.91h-18.501v-8.511h45.513v8.511h-18.501v40.221H325.473z"></path>
+	</g>
+</g>
+</svg>
+
+            </a>
+            </div>
+        </div>
+                    
+
+        <div id="menufont" class="g-block hidden nomarginbottom nopaddingbottom size-80">
+             <div id="menu-3519-particle" class="g-content g-particle">            <nav class="g-main-nav" data-g-hover-expand="true">
+        
+    </nav>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section></div></div>
+                                
+                <section id="g-slider" class="hidden-phone">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-8789-particle" class="g-content g-particle">            <p>
+            </p></div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-6">
+             <div class="spacer"></div>
+        </div>
+                    
+
+        <div id="newslider" class="g-block size-22 nomarginall nopaddingall center nomarginbottom nopaddingbottom wow hvr-grow fadeInUp" data-wow-delay="1s">
+             <div id="custom-2663-particle" class="g-content g-particle">            <figure><a href="/fields-of-activity#g-tile02">
+  <img src="/images/mainpages/slider/fields/telecommunications.jpg" max-height="400"></a>
+  <figcaption><h4>Telecommunications</h4></figcaption>
+</figure>
+            </div>
+        </div>
+                    
+
+        <div id="newslider" class="g-block size-22 center nomarginall nopaddingall nomarginbottom nopaddingbottom wow hvr-grow fadeInDown" data-wow-delay="1s">
+             <div id="custom-6284-particle" class="g-content g-particle">            <a href="/fields-of-activity#g-tile05"><figure>
+  <img src="/images/mainpages/slider/fields/navigation.jpg" max-height="400">
+  <figcaption><h4>Navigation</h4></figcaption>
+</figure></a>
+            </div>
+        </div>
+                    
+
+        <div id="newslider" class="g-block size-22 center nomarginall nopaddingall nomarginbottom nopaddingbottom wow hvr-grow fadeInUp" data-wow-delay="1s">
+             <div id="custom-1462-particle" class="g-content g-particle">            <a href="/fields-of-activity#g-tile08"><figure>
+  <img src="/images/mainpages/slider/fields/earth-observation.jpg" max-height="400">
+  <figcaption><h4>Earth Observation</h4></figcaption>
+</figure></a>
+            </div>
+        </div>
+                    
+
+        <div id="newslider" class="g-block size-22 nomarginall nopaddingall center nomarginbottom nopaddingbottom wow hvr-grow fadeInDown" data-wow-delay="1s">
+             <div id="custom-6181-particle" class="g-content g-particle">            <a href="/fields-of-activity#g-tile11"><figure>
+  <img src="/images/mainpages/slider/fields/science.jpg" max-height="400">
+  <figcaption><h4>Science</h4></figcaption>
+</figure></a>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-6">
+             <div class="spacer"></div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div id="newslider" class="g-block size-100 center nomarginall nopaddingall wow fadeInDown" data-wow-delay="1.5s" data-wow-duration="1.5s">
+             <div id="custom-4610-particle" class="g-content g-particle">            <h1>PIONEERING WITH PASSION.</h1>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section>
+                                
+                <section id="g-mobile" class="hidden-desktop">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-100 center nomarginbottom nopaddingbottom visible-phone">
+             <div id="logo-4159-particle" class="g-content g-particle">            <a href="/" target="_self" title="" aria-label="" rel="home">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="368.504px" height="85.04px" viewBox="0 0 368.504 85.04" enable-background="new 0 0 368.504 85.04" xml:space="preserve">
+<g>
+	<path fill="#004070" d="M82.241,34.03c-0.769-3.027-1.97-5.978-3.604-8.768c-2.407,3.178-5.893,6.576-10.238,10.042
+		C55.466,45.622,36.874,54.292,19.433,58.909c0.339,0.61,0.705,1.215,1.087,1.811c16.607-2.778,34.684-9.551,48.521-17.088
+		C75.139,40.306,79.52,37.071,82.241,34.03z M72.987,18.03c-1.743-1.699-3.633-3.185-5.637-4.443
+		c-1.75,2.831-4.053,5.863-6.839,9.021C49.746,34.808,33.315,46.397,17.2,53.982c0.208,0.575,0.43,1.149,0.669,1.718
+		c15.327-5.703,31.179-15.149,43.038-24.608C67.034,26.203,71.025,21.807,72.987,18.03z M75.689,49.079
+		c-14.686,8-34.769,13.334-52.896,14.789c11.59,14.309,32.541,16.846,47.215,5.547c8.141-6.264,12.654-15.486,13.216-24.99
+		C81.022,45.987,78.502,47.545,75.689,49.079z M52.401,19.761c3.152-3.574,5.552-6.83,7.245-9.748
+		c-10.289-3.295-21.972-1.655-31.18,5.434c-10.979,8.449-15.369,22.273-12.34,34.927C29.599,42.148,42.8,30.642,52.401,19.761z"></path>
+	<g>
+		<path fill="#004070" d="M112.778,67.131V26.91H94.28v-8.511h45.511v8.511h-18.496v40.221H112.778z"></path>
+		<path fill="#004070" d="M145.425,67.131V18.399h43.505v8.511h-35.063v31.711h35.129v8.51H145.425z M160.107,45.95v-7.168h27.014
+			v7.168H160.107z"></path>
+		<path fill="#004070" d="M196.3,67.131v-8.51h36.537c2.272,0,4.031-0.586,5.254-1.744c1.23-1.164,1.846-2.707,1.846-4.625
+			c0-2.101-0.615-3.678-1.846-4.731c-1.223-1.045-2.981-1.571-5.254-1.571h-22.395c-2.275,0-4.342-0.35-6.196-1.037
+			c-1.854-0.689-3.419-1.654-4.695-2.886c-1.275-1.23-2.256-2.69-2.948-4.389c-0.688-1.697-1.039-3.553-1.039-5.568
+			c0-1.964,0.325-3.78,0.971-5.457c0.645-1.675,1.611-3.122,2.884-4.323c1.271-1.208,2.846-2.156,4.726-2.854
+			c1.874-0.689,4.022-1.038,6.434-1.038h34.997v8.511h-34.997c-1.965,0-3.485,0.528-4.561,1.58
+			c-1.065,1.044-1.608,2.514-1.608,4.389c0,1.876,0.551,3.33,1.647,4.359c1.097,1.025,2.579,1.543,4.455,1.543h22.325
+			c4.957,0,8.723,1.158,11.291,3.485c2.57,2.319,3.856,5.851,3.856,10.585c0,2.063-0.316,3.96-0.947,5.701
+			c-0.62,1.744-1.563,3.25-2.809,4.525c-1.251,1.272-2.824,2.268-4.73,2.98c-1.898,0.718-4.122,1.072-6.662,1.072H196.3V67.131z"></path>
+		<path fill="#004070" d="M303.015,67.131l-7.307-12.271h-23.062l4.025-6.903h14.95l-10.864-18.229l-22.116,37.402h-9.718
+			l28.015-46.657c0.49-0.843,1.072-1.517,1.741-2.007c0.672-0.489,1.479-0.735,2.414-0.735c0.939,0,1.733,0.247,2.38,0.735
+			c0.65,0.491,1.221,1.164,1.708,2.007l28.089,46.657H303.015z"></path>
+		<path fill="#004070" d="M325.473,67.131V26.91h-18.501v-8.511h45.513v8.511h-18.501v40.221H325.473z"></path>
+	</g>
+</g>
+</svg>
+
+            </a>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100">
+             <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginall nopaddingall visible-phone">
+             <div id="gadgets-8049-particle" class="g-content g-particle">            <div class="g-gadgets">
+        <div class="g-gadget-buttons">
+            
+                <div class="g-gadget-login">               
+            <a href="#modal-login" data-uk-modal="{center:true}"><i class="fa fa-flag"></i></a>
+        </div>
+        
+                <div class="g-gadget-search">               
+            <a href="#modal-search" data-uk-modal="{center:true}"><i class="fa fa-search"></i></a>
+        </div>
+        
+                <div class="g-gadget-contact">               
+            <a href="#g-touch" data-uk-modal="{center:true}"><i class="fa fa-map-o"></i></a>
+        </div>
+        
+                <div class="g-gadget-offcanvas">               
+            <a class="offcanvas-toggle-particle" data-offcanvas-toggle="">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+
+        </div>
+
+                        <div id="modal-login" class="uk-modal">
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-dialog hide-links">
+                            		<div class="moduletable">
+						<div class="mod-languages">
+
+	<ul class="lang-block">
+						<li class="" dir="ltr">
+			<a href="/de/">
+							Deutsch						</a>
+			</li>
+							</ul>
+
+</div>
+		</div>
+	
+            
+                    </div>
+    </div>
+
+        
+                        <div id="modal-search" class="uk-modal">
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-dialog">
+                            		<div class="moduletable">
+						<div class="search mod_search238">
+	<form action="/en/" method="post" class="form-inline" role="search">
+		<label for="mod-search-searchword238" class="element-invisible">Search</label> <input name="searchword" id="mod-search-searchword238" maxlength="200" class="inputbox search-query input-medium" type="search" size="30" placeholder="Search">		<input type="hidden" name="task" value="search">
+		<input type="hidden" name="option" value="com_search">
+		<input type="hidden" name="Itemid" value="600">
+	</form>
+</div>
+		</div>
+	
+            
+                    </div>
+    </div>
+
+        
+                        <div id="g-touch" class="uk-modal">
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-dialog" style="width: 800px;">
+            <div class="g-touch-contacts">
+                <div class="g-grid">
+                                    </div>
+            </div>
+            <div class="g-googlemap">
+                <div id="g-map-2124205532" style="width: 800px; height: 300px; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 984; transform: matrix(1, 0, 0, 1, -14, -196);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 984; transform: matrix(1, 0, 0, 1, -14, -196);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div></div></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -14px; top: -43px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0; left: -14px; top: -43px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" usemap="#gmimap0" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap0" id="gmimap0"><area log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe></div></div><div style="background-color: white; font-weight: 500; font-family: Roboto, sans-serif; padding: 15px 25px; box-sizing: border-box; top: 5px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 5px; left: 50%; max-width: 375px; position: absolute; transform: translateX(-50%); width: calc(100% - 10px); z-index: 1;"><div><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg" draggable="false" style="padding: 0px; margin: 0px; border: 0px; height: 17px; vertical-align: middle; width: 52px; user-select: none;"></div><div style="line-height: 20px; margin: 15px 0px;"><span style="color: rgba(0, 0, 0, 0.87); font-size: 14px;">This page can't load Google Maps correctly.</span></div><table style="width: 100%;"><tr><td style="line-height: 16px; vertical-align: middle;"><a href="https://developers.google.com/maps/documentation/javascript/error-messages?utm_source=maps_js&amp;utm_medium=degraded&amp;utm_campaign=keyless#api-key-and-billing-errors" target="_blank" rel="noopener" style="color: rgba(0, 0, 0, 0.54); font-size: 12px;">Do you own this website?</a></td><td style="text-align: right;"><button class="dismissButton">OK</button></td></tr></table></div></div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            </div>
+        </div>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section>
+                    
+                <section id="g-title" class="hidden-phone">
+                                        <div class="g-grid">                        
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-9061-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-rocket"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="700" data-speed="4000" data-refresh-interval="100">700</h4>
+						<h4 class="g-animated-counter-title">Space Projects</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-3123-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-cube"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="12000" data-speed="9000" data-refresh-interval="100">5467</h4>
+						<h4 class="g-animated-counter-title">Clean Room Area [m²]</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-6545-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-globe"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="25000" data-speed="11000" data-refresh-interval="100">9318</h4>
+						<h4 class="g-animated-counter-title">Units in Orbit</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-9463-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-university"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="47" data-speed="8000" data-refresh-interval="100">24</h4>
+						<h4 class="g-animated-counter-title">Years of Space Heritage</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-6614-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-slack"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="1500" data-speed="5000" data-refresh-interval="100">1230</h4>
+						<h4 class="g-animated-counter-title">Devices per Year</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+                    
+
+        <div class="g-block  size-16-7">
+             <div id="animated-counter-4591-particle" class="g-content g-particle">            <div class="g-animated-counter">
+				<div class="g-grid">
+															<div class="g-block g-animated-counter-item">
+					<div class="g-content">
+						<span class="g-animated-counter-icon fa fa-hourglass-half"></span>						<h4 class="g-animated-counter-number timer" data-from="0" data-to="350000000" data-speed="13000" data-refresh-interval="100">110384615</h4>
+						<h4 class="g-animated-counter-title">Hours of Operation</h4>					</div>
+				</div>
+					</div>
+	</div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+                                
+                <section id="g-segment-1" class="wow slideInUp">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-2393-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/media-center#g-tile05">Latest Press Releases</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div id="content-justify" class="g-block size-100 nomargintop nopaddingtop">
+             <div id="news-pro-joomla-6653-particle" class="g-content g-particle">            <div class="g-news-pro">
+				<div class="uk-slidenav-position" data-uk-slideset="{duration: 200,  animation: 'slide'}">
+			
+			<div class="uk-slider-container">
+				<div class="uk-slideset uk-grid uk-grid-width-1-1">
+								<div class="g-news-pro-page uk-active" style="">
+							<div class="uk-grid uk-grid-width-1-4">
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-press">
+																								<div class="g-news-pro-image image-fullwidth image-link" style="background-image: url(/images/media/blog/190806_lct135_on_edrs-c.JPG);  height: 340px;">
+																	<a href="/en/media-center/press/824-edrs-c-opens-new-chapter-in-broadband-earth-observation"></a>
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title"><a href="/en/media-center/press/824-edrs-c-opens-new-chapter-in-broadband-earth-observation">EDRS-C opens new chapter in broadband Earth observation</a></h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>6 August 2019</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc">Laser Communications Terminal on board European relay satellite enables significant higher data transfer rates and shorter access times.</div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-press">
+																								<div class="g-news-pro-image image-fullwidth image-link" style="background-image: url(/images/media/blog/190408_nanosatellites.jpg);  height: 340px;">
+																	<a href="/en/media-center/press/813-nanosatellite-sees-the-light"></a>
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title"><a href="/en/media-center/press/813-nanosatellite-sees-the-light">Nanosatellite sees the light</a></h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>10 April 2019</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc">Laser Communications for a new age in space TESAT, KSAT and GomSpace have partnered up to introduce full optical communications capability for new innovative small...</div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-press">
+																								<div class="g-news-pro-image image-fullwidth image-link" style="background-image: url(/images/media/blog/190118_tesat.jpg);  height: 340px;">
+																	<a href="/en/media-center/press/789-tesat-on-the-road-to-success"></a>
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title"><a href="/en/media-center/press/789-tesat-on-the-road-to-success">Tesat on the road to success</a></h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>18 January 2019</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc">Tesat registers increasing order intake Continuing high level of investment in research and development New CEO, Dr. Marc Steckling, expects 20 % growth in the...</div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-press">
+																								<div class="g-news-pro-image image-fullwidth image-link" style="background-image: url(/images/media/blog/181120_lct135-test-bench.jpg);  height: 340px;">
+																	<a href="/en/media-center/press/766-laser-communications-technology-from-tesat-setting-new-records"></a>
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title"><a href="/en/media-center/press/766-laser-communications-technology-from-tesat-setting-new-records">Laser Communications Technology from Tesat setting new records</a></h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>21 November 2018</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc">As the worlds’ only serial manufacturer of in-orbit certificated and tested laser communication terminals, Tesat is chasing its own records. Now another LCT135...</div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+									</div>
+					</div>
+	
+				</div>
+			</div>
+
+			
+					</div>
+	</div>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </section>
+                
+                                
+                
+    
+                <section id="g-container-main1" class="g-wrapper wow slideInUp">
+                <div class="g-container">                    <div class="g-grid">                        
+
+        <div class="g-block size-75">
+             <section id="g-tile03">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-8584-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/media-center#g-tile02">Latest Articles</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomargintop nopaddingtop">
+             <div id="top-news-joomla-5958-particle" class="g-content g-particle">            <div class="g-top-news style1 g-inline_2010465710 gutter-enabled">
+                
+        <div class="g-top-news-container clearfix">
+
+            
+                            
+                
+                
+                
+                                
+                <div class="g-top-news-item g-top-news-main g-tn1 g-content" style="height: 600px;">
+                    <div class="g-top-news-item-inner" style="background-image: url(/images/media/blog/191114_TESAT_Campus_LoRes.jpg?5de4d9a9);">
+                        <div class="g-top-news-item-image">
+                            <a href="/en/media-center/blog/information/83-news/873-tesat-campus-success-story-continues"></a>
+                        </div>
+                        <div class="g-top-news-item-info">
+                                                            <span class="g-article-category">
+                                                                                                                <a href="/en/media-center/blog/information/83-news">
+                                            <span class="g-cat-news">News</span>
+                                        </a>
+                                                                    </span>                                      
+                            
+                                                            <h4 class="g-article-title">
+                                    <a href="/en/media-center/blog/information/83-news/873-tesat-campus-success-story-continues">TESAT Campus: Success Story continues</a>
+                                </h4>
+                            
+                                                            <div class="g-article-details">
+                                                                            <span class="g-article-date"><i class="fa fa-clock-o"></i>2 December 2019</span>
+                                    
+                                    
+                                                                    </div>
+                            
+                                                    </div>
+                    </div>
+                </div>
+
+                            
+                
+                
+                
+                                
+                <div class="g-top-news-item g-top-news-secondary g-tn2 g-content" style="height: 300px;">
+                    <div class="g-top-news-item-inner" style="background-image: url(/images/media/blog/2019118_spacetechexpo.jpg);">
+                        <div class="g-top-news-item-image">
+                            <a href="/en/media-center/blog/information/85-trade-fairs/871-tesat-space-tech-expo-2019"></a>
+                        </div>
+                        <div class="g-top-news-item-info">
+                                                            <span class="g-article-category">
+                                                                                                                <a href="/en/media-center/blog/information/85-trade-fairs">
+                                            <span class="g-cat-trade-fairs">Trade Fairs</span>
+                                        </a>
+                                                                    </span>                                      
+                            
+                                                            <h4 class="g-article-title">
+                                    <a href="/en/media-center/blog/information/85-trade-fairs/871-tesat-space-tech-expo-2019">TESAT @ Space Tech Expo 2019</a>
+                                </h4>
+                            
+                                                            <div class="g-article-details">
+                                                                            <span class="g-article-date"><i class="fa fa-clock-o"></i>18 November 2019</span>
+                                    
+                                    
+                                                                    </div>
+                            
+                                                    </div>
+                    </div>
+                </div>
+
+                            
+                
+                
+                
+                                
+                <div class="g-top-news-item g-top-news-secondary g-tn3 g-content" style="height: 300px;">
+                    <div class="g-top-news-item-inner" style="background-image: url(/images/media/blog/191113_MEWS2019_1.JPG);">
+                        <div class="g-top-news-item-image">
+                            <a href="/en/media-center/blog/information/83-news/869-mews-2019-into-the-future-with-eee-cots"></a>
+                        </div>
+                        <div class="g-top-news-item-info">
+                                                            <span class="g-article-category">
+                                                                                                                <a href="/en/media-center/blog/information/83-news">
+                                            <span class="g-cat-news">News</span>
+                                        </a>
+                                                                    </span>                                      
+                            
+                                                            <h4 class="g-article-title">
+                                    <a href="/en/media-center/blog/information/83-news/869-mews-2019-into-the-future-with-eee-cots">MEWS 2019: Into the future with EEE &amp; COTS</a>
+                                </h4>
+                            
+                                                            <div class="g-article-details">
+                                                                            <span class="g-article-date"><i class="fa fa-clock-o"></i>13 November 2019</span>
+                                    
+                                    
+                                                                    </div>
+                            
+                                                    </div>
+                    </div>
+                </div>
+
+                            
+                
+                
+                
+                                
+                <div class="g-top-news-item g-top-news-secondary g-tn4 g-content" style="height: 300px;">
+                    <div class="g-top-news-item-inner" style="background-image: url(/images/media/blog/191107_accede_parts_2.jpg);">
+                        <div class="g-top-news-item-image">
+                            <a href="/en/media-center/blog/information/83-news/866-parts-agency-accede-on-cots-use-in-space"></a>
+                        </div>
+                        <div class="g-top-news-item-info">
+                                                            <span class="g-article-category">
+                                                                                                                <a href="/en/media-center/blog/information/83-news">
+                                            <span class="g-cat-news">News</span>
+                                        </a>
+                                                                    </span>                                      
+                            
+                                                            <h4 class="g-article-title">
+                                    <a href="/en/media-center/blog/information/83-news/866-parts-agency-accede-on-cots-use-in-space">Parts Agency @ ACCEDE on COTS use in space</a>
+                                </h4>
+                            
+                                                            <div class="g-article-details">
+                                                                            <span class="g-article-date"><i class="fa fa-clock-o"></i>8 November 2019</span>
+                                    
+                                    
+                                                                    </div>
+                            
+                                                    </div>
+                    </div>
+                </div>
+
+                            
+                
+                
+                
+                                
+                <div class="g-top-news-item g-top-news-secondary g-tn5 g-content" style="height: 300px;">
+                    <div class="g-top-news-item-inner" style="background-image: url(/images/media/blog/190803_cubelct_web.jpg);">
+                        <div class="g-top-news-item-image">
+                            <a href="/en/media-center/blog/information/83-news/821-tesat-delivers-game-changer-for-smallsat-market"></a>
+                        </div>
+                        <div class="g-top-news-item-info">
+                                                            <span class="g-article-category">
+                                                                                                                <a href="/en/media-center/blog/information/83-news">
+                                            <span class="g-cat-news">News</span>
+                                        </a>
+                                                                    </span>                                      
+                            
+                                                            <h4 class="g-article-title">
+                                    <a href="/en/media-center/blog/information/83-news/821-tesat-delivers-game-changer-for-smallsat-market">TESAT delivers game changer for SmallSat market</a>
+                                </h4>
+                            
+                                                            <div class="g-article-details">
+                                                                            <span class="g-article-date"><i class="fa fa-clock-o"></i>3 August 2019</span>
+                                    
+                                    
+                                                                    </div>
+                            
+                                                    </div>
+                    </div>
+                </div>
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+                    
+
+        <div class="g-block size-25">
+             <section id="g-tile04">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom hidden-phone">
+             <div id="custom-4410-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/media-center">Focus on</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom visible-phone">
+             <div id="custom-5602-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/media-center">Focus on</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomargintop nopaddingtop hidden-phone">
+             <div id="custom-6891-particle" class="g-content g-particle">            <iframe width="100%" height="600" src="https://www.youtube.com/embed/cktyWtfbw04?rel=0&amp;color=white&amp;modestbranding=1&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nopaddingtop nomargintop visible-phone">
+             <div id="custom-6042-particle" class="g-content g-particle">            <iframe width="100%" height="600" src="https://www.youtube.com/embed/cktyWtfbw04?rel=0&amp;color=white&amp;modestbranding=1&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+            </div>
+    </div>
+        
+    </section>
+    
+                
+                                
+                
+    
+                <section id="g-container-main2" class="g-wrapper wow slideInUp">
+                <div class="g-container">                    <div class="g-grid">                        
+
+        <div class="g-block size-25">
+             <section id="g-tile06">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-8488-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/career-center">Career</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomargintop nopaddingtop">
+             <div id="slideshow-9932-particle" class="g-content g-particle">            <div class="g-slideshow">
+    	<div class="uk-slidenav-position" data-uk-slideshow="{autoplay:false, kenburns:false, height:600, animation:'fade', duration:500, pauseOnHover:true}">
+    		<ul class="uk-slideshow uk-overlay-active" style="height: 600px;">
+		        		        	<li class="g-slideshow-item uk-active" aria-hidden="false" style="height: 600px;"><div class="uk-cover-background uk-position-cover" style="background-image: url(&quot;/templates/g5_hydrogen/custom/images/mainpages/career/c_astronaut.jpg&quot;);"></div>
+						<canvas width="1200" height="1200" style="width: 100%; height: auto; opacity: 0;"></canvas>													<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-fade">
+								<h3 class="g-slideshow-title"><a target="_parent" href="/career-center#g-segment-6a">Latest Vacancies</a></h3>															</div>
+								            </li>
+		            		</ul>
+    		    		    		    	</div>
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+                    
+
+        <div class="g-block size-25">
+             <section id="g-tile07">
+                                        <div class="g-grid">                        
+
+        <div id="whiteout" class="g-block size-100 nomarginbottom nopaddingbottom hidden-phone">
+             <div id="custom-1128-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/career">Career</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomargintop nopaddingtop">
+             <div id="slideshow-1621-particle" class="g-content g-particle">            <div class="g-slideshow">
+    	<div class="uk-slidenav-position" data-uk-slideshow="{autoplay:false, kenburns:false, height:600, animation:'fade', duration:500, pauseOnHover:true}">
+    		<ul class="uk-slideshow uk-overlay-active" style="height: 600px;">
+		        		        	<li class="g-slideshow-item uk-active" aria-hidden="false" style="height: 600px;"><div class="uk-cover-background uk-position-cover" style="background-image: url(&quot;/templates/g5_hydrogen/custom/images/mainpages/career/c_fingertip.jpg&quot;);"></div>
+						<canvas width="1200" height="1200" style="width: 100%; height: auto; opacity: 0;"></canvas>													<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-fade">
+								<h3 class="g-slideshow-title"><a target="_parent" href="/career-center">Learn more</a></h3>															</div>
+								            </li>
+		            		</ul>
+    		    		    		    	</div>
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+                    
+
+        <div class="g-block size-25">
+             <section id="g-tile08">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-4661-particle" class="g-content g-particle">            <h4 style="color: #003a80;"><a href="/media#g-tile09">Next Events</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div id="events" class="g-block size-100 nomargintop nopaddingtop">
+             <div id="news-pro-joomla-3889-particle" class="g-content g-particle">            <div class="g-news-pro">
+				<div class="uk-slidenav-position" data-uk-slideset="{duration: 200,  animation: 'fade'}">
+			
+			<div class="uk-slider-container">
+				<div class="uk-slideset uk-grid uk-grid-width-1-1">
+								<div class="g-news-pro-page uk-active" style="">
+							<div class="uk-grid uk-grid-width-1-1">
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-recruiting-veranstaltungen">
+																								<div class="g-news-pro-image image-fullwidth" style="background-image: url(/images/media/events-fairs/x_step-in.jpg);  height: 181px;">
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title">StepIn Stuttgart 2019</h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>27 November</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc"><h4><a href="http://step-in-stuttgart.de/" target="_blank" rel="noopener">Info</a></h4></div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+									</div>
+							<div class="uk-grid uk-grid-width-1-1">
+					
+						
+						
+						
+						
+						
+						
+						
+													<div class="g-news-pro-item vertical g-cat-recruiting-veranstaltungen">
+																								<div class="g-news-pro-image image-fullwidth" style="background-image: url(/images/media/events-fairs/x_airbus-career-day.jpg);  height: 181px;">
+															</div>
+						
+								
+																	<div class="g-info-container">
+																												<h4 class="g-news-pro-title">Airbus Career Day 2019</h4>
+						
+										
+																												<div class="g-article-details details-show">
+																	<span class="g-article-date"><i class="fa fa-clock-o"></i>28 November</span>
+								
+								
+								
+															</div>
+						
+										
+																																			<div class="g-news-pro-desc"><h4><a href="https://www.facebook.com/events/437413833644972/" target="_blank" rel="noopener">Info</a></h4></div>
+						
+										
+										
+																			</div>
+															</div>
+						
+
+									</div>
+					</div>
+	
+				</div>
+			</div>
+
+			
+							<div class="g-news-pro-nav">
+										
+											<ul class="uk-slideset-nav uk-dotnav uk-flex-center uk-invisible"><li data-uk-slideset-item="0" class="uk-active"><a></a></li></ul>
+									</div>
+					</div>
+	</div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+                    
+
+        <div class="g-block size-25">
+             <section id="g-tile10">
+                                        <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom">
+             <div id="custom-9920-particle" class="g-content g-particle">            <h4 style="color: #004070;"><a href="/parts">Parts Agency</a></h4>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomargintop nopaddingtop">
+             <div id="slideshow-6117-particle" class="g-content g-particle">            <div class="g-slideshow">
+    	<div class="uk-slidenav-position" data-uk-slideshow="{autoplay:false, kenburns:false, height:600, animation:'fade', duration:500, pauseOnHover:true}">
+    		<ul class="uk-slideshow uk-overlay-active" style="height: 600px;">
+		        		        	<li class="g-slideshow-item uk-active" aria-hidden="false" style="height: 600px;"><div class="uk-cover-background uk-position-cover" style="background-image: url(&quot;/templates/g5_hydrogen/custom/images/mainpages/services/parts_microscope.jpg&quot;);"></div>
+						<canvas width="1280" height="851" style="width: 100%; height: auto; opacity: 0;"></canvas>													<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-fade">
+								<h3 class="g-slideshow-title"><a target="_parent" href="/parts">Parts Agency</a></h3>															</div>
+								            </li>
+		            		</ul>
+    		    		    		    	</div>
+    </div>
+            </div>
+        </div>
+            </div>
+            
+    </section>
+        </div>
+            </div>
+    </div>
+        
+    </section>
+    
+                                
+                <footer id="g-footer">
+                <div class="g-container">                                <div class="g-grid">                        
+
+        <div class="g-block size-90 nopaddingbottom nomarginbottom hidden-phone">
+             <div id="custom-1450-particle" class="g-content g-particle">            <a href="/privacy">Privacy</a>
+<a href="/imprint">Imprint</a>
+<a href="/terms">Terms and Conditions</a>
+<a href="/contact">Contact</a>
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-10 align-right nopaddingbottom nomarginbottom hidden-phone">
+             <div id="scroll-to-5512-particle" class="g-content g-particle">            <div class="g-scroll-to">
+        <a href="#g-title" data-uk-smooth-scroll="{offset: 100}"><span class="fa fa-chevron-up"></span> </a>
+    </div>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-30 hidden-phone">
+             <div id="copyright-1287-particle" class="g-content g-particle">            ©
+        2019
+    Tesat-Spacecom GmbH &amp; Co. KG
+            </div>
+        </div>
+                    
+
+        <div class="g-block size-70 align-right nopaddingtop nomargintop hidden-phone">
+             <div id="custom-9295-particle" class="g-content g-particle">            <h3><a href="https://www.facebook.com/TesatSpacecom/" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:#3b5998"></i></a>
+
+<a href="https://www.linkedin.com/company/tesat-spacecom" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" style="color:#0077B5"></i></a>
+
+<a href="https://twitter.com/TesatSpacecom" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:#00aced"></i></a></h3>
+            </div>
+        </div>
+            </div>
+                            <div class="g-grid">                        
+
+        <div class="g-block size-100 nomarginbottom nopaddingbottom visible-phone">
+             <div id="custom-1664-particle" class="g-content g-particle">            <a href="/privacy">Privacy</a>  <a href="/imprint">Imprint</a>
+<a href="/terms">Terms and Conditions</a>
+  <a href="/contact">Contact</a>
+<br>
+©
+ 2018 Tesat-Spacecom GmbH &amp; Co. KG
+            
+<h1><a href="https://www.facebook.com/TesatSpacecom/" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:#3b5998"></i></a>
+
+<a href="https://www.linkedin.com/company/tesat-spacecom" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" style="color:#0077B5"></i></a>
+
+<a href="https://twitter.com/TesatSpacecom" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:#00aced"></i></a></h1>
+            </div>
+        </div>
+            </div>
+            </div>
+        
+    </footer>
+            
+                        
+
+        </div>
+                    
+
+                        <script type="text/javascript" src="/media/gantry5/assets/js/main.js"></script>
+    <script type="text/javascript" src="/media/gantry5/assets/js/lightcase.js"></script>
+    <script type="text/javascript" src="/templates/g5_hydrogen/custom/js/jquery.countTo.js"></script>
+    <script type="text/javascript" src="/templates/g5_hydrogen/custom/js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript">
+			jQuery('.timer').waypoint(function() {
+			    jQuery('.timer').countTo();
+			    this.destroy();
+			}, {offset: "bottom-in-view"});
+		</script>
+    <script type="text/javascript">jQuery(document).ready(function($) { jQuery('[data-rel^=lightcase]').lightcase({maxWidth: '100%', maxHeight: '100%', video: {width: '1280', height: '720'}}); });</script>
+    <script type="text/javascript" src="/templates/g5_hydrogen/custom/uikit/js/uikit.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
+    <script type="text/javascript">
+                (function($) {
+                    $(window).load(function() {
+                        $("#g-navigation").headroom({
+                            "offset": 300,
+                            "tolerance": 5,
+                            "classes": {
+                                "initial": "animated",
+                                "pinned": "slideDown",
+                                "unpinned": "slideUp"
+                            }
+                        });
+
+                        var stickyOffset = $('#g-navigation').offset().top;                
+                        var stickyContainerHeight = $('#g-navigation').height();
+
+                        $('#g-navigation').wrap( "<div class='g-fixed-container'>" );
+                        $('.g-fixed-container').css("height", stickyContainerHeight);
+
+                        
+                        $(window).scroll(function(){
+                            var sticky = $('#g-navigation'),
+                                scroll = $(window).scrollTop();
+
+                            if (scroll >= stickyOffset ) sticky.addClass('g-fixed-active');
+                            else sticky.removeClass('g-fixed-active');
+                        });
+                    });
+                })(jQuery);
+            </script>
+    <script type="text/javascript">
+                (function($) {
+                    $(window).load(function() {
+                        var stickyOffset = $('#g-navigation').offset().top;
+                        var stickyContainerHeight = $('#g-navigation').height();
+
+                        $('#g-navigation').wrap( "<div class='g-fixed-container'>" );
+                        $('.g-fixed-container').css("height", stickyContainerHeight);
+
+                                                $(window).resize(function() {
+                            if( $(window).width() < 768 && $('.g-fixed-container').length ) {
+                                $('#g-navigation').unwrap();
+                            }
+
+                            if( $(window).width() > 767 && $('.g-fixed-container').length == 0 ) {
+                                $('#g-navigation').wrap( "<div class='g-fixed-container'>" );
+                                $('.g-fixed-container').css("height", stickyContainerHeight);
+                            }
+                        });
+                        
+                        $(window).scroll(function(){
+                            var sticky = $('#g-navigation'),
+                                scroll = $(window).scrollTop();
+
+                            if (scroll >= stickyOffset && $(window).width() > 767) sticky.addClass('g-fixed-element');
+                            else sticky.removeClass('g-fixed-element');
+
+                                                    });
+                    });
+                })(jQuery);
+            </script>
+    <script type="text/javascript">
+			(function($) {
+				// Header Search
+				$(window).load(function() {
+					var headerSearch = $("#header-search");
+					var headerSearchHeight = $("#g-navigation").innerHeight();
+					var closeSearch = $("#header-search a.uk-close");
+					var inputSearch = $("input#mod-search-searchword");
+					var searchToggle = $("a#header-search-toggle");
+
+					$(headerSearch).prependTo($("#g-navigation .g-container")).css({
+						'height' : headerSearchHeight,
+						'line-height' : (headerSearchHeight) + 'px'
+					});
+
+					$(closeSearch).css({
+						'top' : (headerSearchHeight / 2) - 10 
+					});
+
+					$(inputSearch).css({
+						'height' : headerSearchHeight,
+						'line-height' : (headerSearchHeight) + 'px'
+					});
+
+					$(searchToggle).on("click", function(e) {
+						e.preventDefault();
+						$(headerSearch).fadeIn("fast");
+						$(inputSearch).focus();
+					});
+
+					$(closeSearch).on("click", function(e) {
+						e.preventDefault();
+						$(headerSearch).fadeOut("fast");
+					});
+				});
+			})(jQuery);
+		</script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+        function initialize2124205532() {
+
+            var latlng = new google.maps.LatLng(48.944994,9.426569);
+
+            var myOptions =
+            {
+                zoom: 16,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+                
+                scrollwheel: 0
+            };
+
+            var map = new google.maps.Map(document.getElementById("g-map-2124205532"), myOptions);
+
+            var myMarker = new google.maps.Marker(
+            {
+                position: latlng,
+                map: map,
+            });
+
+            var contentString = '';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            
+            
+            // Resize stuff...
+            var currCenter = map.getCenter();
+
+            // Fix for reloading the map in a modal
+            jQuery('.uk-modal').on({
+                'show.uk.modal': function(){
+                    google.maps.event.trigger(map, "resize");
+                    map.setCenter(currCenter);  
+                }
+            });
+
+        }
+        google.maps.event.addDomListener(window, 'load', initialize2124205532);
+
+    </script>
+    
+
+    
+
+        
+    
+
+<div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div></body></html>
