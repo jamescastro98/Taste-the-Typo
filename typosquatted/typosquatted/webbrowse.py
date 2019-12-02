@@ -15,9 +15,10 @@ def fetchURL(URL:str):
         name = '_'+URL.replace('.','_').replace('https://','')
         
         try:
-            # print(imgName)    # debugging 
+            # print(imgName)    # debugging
+            await page.setViewport({'width': 1366,'height': 768})
             await page.goto(URL) #change this to website passed in.
-            await page.screenshot({'path':name+'.png','fullPage' : True})
+            await page.screenshot({'path':name+'.png'})
             st= await page.content()
             f = open(name +".html", "w") #need to make an array of files to dump them at.
             f.write(st)

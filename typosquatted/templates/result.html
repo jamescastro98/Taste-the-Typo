@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Taste the typo results</title>
+		<title>Taste the Typo Results</title>
 		<meta charset="UTF-8"/>
 
 		<style>
@@ -16,12 +16,40 @@
   			padding: 10px;
 			margin-top:10px;
 		}
+
+		.content{
+  			margin-top:20px;
+  			padding-top:10px;
+  			padding-left:15%;
+  			padding-right:15%;
+  			background: rgba(0, 0, 0, 0.6);
+  			font-weight:lighter;
+		}
+  
+		.parallax{
+			background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
+			min-height:1300px; /*should be 100%*/
+			min-width: 100%;
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			font-family: 'Montserrat', sans-serif;
+			background-size: cover;
+			color:white;
+			font-size:20px;
+			letter-spacing:5px;
+		}
+
 		</style>
 	</head>
 	<body>
+	<div class="parallax">
+	<div align="center">
+	<div class="content">
 		{{ input }}
 		<div class="grid-container", id = "resultsgrid">
-			<div class="grid-item">demo</div> 
+			<div class="grid-item">Loading...</div> 
 
 		</div>
 		<script>
@@ -48,13 +76,14 @@
   				var i;
   				for(i = 0; i < arr.length; i++) {
 				if (arr[i] != ""){
-    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" style="width:500px;height:600px; ></div>';
+    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" style="width:30%;height:30%;overflow:hidden ></div>';
 				}
 			}
   			document.getElementById("resultsgrid").innerHTML = out;
 };
 			}
 		</script>
+		</div></div></div>
 	</body>
 	
 </html>

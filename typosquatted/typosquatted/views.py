@@ -32,9 +32,10 @@ def ResultView(request):
             # masternode setup -Nathan
             # signal.signal(signal.SIGINT, shutdown)
             if init:
-                setupConnections()
-                init = False
-            gatherTypoSquatSites(Input)    # not too sure what the arg is
+                print("Hi.")
+                #setupConnections()
+                #init = False
+            #gatherTypoSquatSites(Input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             
