@@ -18,7 +18,7 @@ def start_worker():
     while True:
         try:
             s.settimeout(None)
-            s.connect(('10.0.2.2', port)) # CHANGE TO 10.0.2.2 on VM!
+            s.connect(('127.0.0.1', port)) # CHANGE TO 10.0.2.2 on VM!
         except:
             print("unable to connect...")
             time.sleep(10)
@@ -45,7 +45,7 @@ def start_worker():
         s.close()
         s = socket.socket()
         s.settimeout(None)
-        s.connect(('10.0.2.2', port)) 
+        s.connect(('127.0.0.1', port)) 
         # the way I (Joey) Edited it, I have the master node disconnect after receving data. this is to prevent timeouts
 
 # if workernode.py is executed on its own
