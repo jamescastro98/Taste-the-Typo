@@ -44,6 +44,10 @@ def recvfile(filename, addr):
         x=open("./data/" + globalInput + "/"+(pngname+".png"),'wb')
         x.write(pngarr[1])
         x.close()
+        #append to index file
+        i=open("./data/" + globalInput + "/index.txt",'a+')
+        i.write(pngname + "\n")
+        i.close()
     except:
         amcry=1
  

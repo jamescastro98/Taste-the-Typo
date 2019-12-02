@@ -10,6 +10,11 @@
   			display: grid;
   			grid-template-columns: auto auto auto;
   			padding: 10px;
+			margin: 0 auto;
+		}
+		.grid-item {
+  			padding: 10px;
+			margin-top:10px;
 		}
 		</style>
 	</head>
@@ -30,19 +35,22 @@
 				//then add any new results to the results var and the resultsgrid
 				var indexFile = new XMLHttpRequest();
 				indexFile.onload = function(){
-					var arr = JSON.parse(this.responseText);
+					var arr = this.responseText.split("\n");
+					//var arr = JSON.parse(this.responseText);
 					displayResults(arr);
 				}
 
-				indexFile.open("GET", directory + input + "/index.json", false)
+				indexFile.open("GET", directory + input + "/index.txt", false)
 				indexFile.send()
 
 			function displayResults(arr) {
   				var out = "";
   				var i;
   				for(i = 0; i < arr.length; i++) {
-    			out += '<div class=\"grid-item\">' + arr[i].text + '</div>';
-  			}
+				if (arr[i] != ""){
+    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" style="width:500px;height:600px; ></div>';
+				}
+			}
   			document.getElementById("resultsgrid").innerHTML = out;
 };
 			}
