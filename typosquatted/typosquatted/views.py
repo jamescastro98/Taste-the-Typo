@@ -8,6 +8,7 @@ import signal
 import time
 import os
 import re
+import threading
 #from models import Post
 
 #change!
@@ -52,17 +53,8 @@ def ResultView(request):
                 setupConnections()
                 init = False
             if not os.path.isdir("./data/{}".format(Input)):
-                gatherTypoSquatSites(Input)    # not too sure what the arg is
-            #
-            # workernode setup -Nathan
-            
-            #start_worker()
-            #
-            #   note: this should only start one worker, 
-            #       not sure if we only want X amount of workers or scale it to
-            #       number of typos we generated (i.e. 1 worker every 10 typos)
-            #   note2: also commented out the code just in case I break everything
-            #
-
+                typoThread = threading.Thread(target = gatherTypoSquatSites, args = (Input,))
+                typoThread.setDaemon(True)
+                typoThread.start()
             #time.sleep(5)
             return render(request, "result.html", {'input':Input, 'MEDIA_URL':settings.MEDIA_URL})
