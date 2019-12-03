@@ -5,8 +5,8 @@ from django.conf import settings
 from .masternode import setupConnections,gatherTypoSquatSites
 from .workernode import start_worker
 import signal
-
 import time
+import os
 #from models import Post
 
 #change!
@@ -45,7 +45,8 @@ def ResultView(request):
             if init:
                 setupConnections()
                 init = False
-            gatherTypoSquatSites(Input)    # not too sure what the arg is
+            if not os.path.isdir("./data/{}".format(Input)):
+                gatherTypoSquatSites(Input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             
