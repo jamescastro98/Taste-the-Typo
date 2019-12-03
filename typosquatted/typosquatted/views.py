@@ -31,11 +31,10 @@ def ResultView(request):
             # Execute Master + Worker Nodes Here
             # masternode setup -Nathan
             # signal.signal(signal.SIGINT, shutdown)
-            #if init:
-            #    print("Hi.")
-            #    setupConnections()
-            #    init = False
-            #gatherTypoSquatSites(Input)    # not too sure what the arg is
+            if init:
+                setupConnections()
+                init = False
+            gatherTypoSquatSites(Input)    # not too sure what the arg is
             #
             # workernode setup -Nathan
             

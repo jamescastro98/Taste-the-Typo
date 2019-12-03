@@ -32,11 +32,11 @@ def start_worker():
         print(server_msg)
         filename = fetchURL(server_msg)  # commented out to test connection between nodes
         if(filename!="404"):
-            s.send(bytes(filename+".html", encoding='utf-8'))
+            s.send(bytes(filename + "~", encoding='utf-8'))
             sendFile(filename+".html", s)
             #time.sleep(1) #give it a second to process.
             
-            s.send(bytes(filename+".png", encoding='utf-8'))
+            #s.send(bytes(filename+".png", encoding='utf-8'))
             sendFile(filename+".png", s)
             print('*** file sent')
             

@@ -18,37 +18,42 @@ def preptypo(typo):
     # print('Prepped '+typo+' to enter test()')   # debugging statement: successful prep
     return typo
 
-def recvfile(filename, addr):
+def recvfile(addr):
     # print("I genuinely don't know what this is supposed to do.")
     content = addr.recv(1024)
     store=content
     while(content):
         content=addr.recv(1024)
         store+=content
-    htmldelim=bytearray('</html>','utf-8')
-    pngdelim=bytearray('.png','utf-8')
+    if content.decode('utf-8') == '404':
+        return
+    htmldelim=bytearray('~','utf-8')
+    pngdelim = bytes([0x89,0x50,0x4E,0x47,0x0D,0x0A,0x1A,0x0A])
     try:
         bytarr=store.split(htmldelim,1)
-        htmldoc=bytarr[0].decode('utf-8')
-        #htmldoc+="</html>"
+        name=bytarr[0].decode('utf-8')
+        print("receved {}".format(name))
         rest=bytarr[1]
-        pngarr=rest.split(pngdelim,1)
-        pngname=pngarr[0].decode('utf-8')
-        f = open("./data/" + globalInput + "/" + filename,'wb')
-        htmldoc=htmldoc+"</html>"
-        print(htmldoc)
+        rest=rest.split(pngdelim,1)
+        htmldoc = rest[0].decode('utf-8')
+        pngarr= pngdelim + rest[1]
+        #pngname=pngarr[0].decode('utf-8')
+        f = open("./data/" + globalInput + "/" + name + ".html",'wb')
+        #htmldoc=htmldoc+"</html>"
+        #print(htmldoc)
         f.write(htmldoc.encode('utf-8'))
         f.close()
         #print(str(pngarr[1]))
-        print(pngname +".png")
-        x=open("./data/" + globalInput + "/"+(pngname+".png"),'wb')
-        x.write(pngarr[1])
+        #print(pngname +".png")
+        x=open("./data/" + globalInput + "/"+ name+".png" ,'wb')
+        x.write(pngarr)
         x.close()
         #append to index file
         i=open("./data/" + globalInput + "/index.txt",'a+')
-        i.write(pngname + "\n")
+        i.write(name + "\n")
         i.close()
-    except:
+    except Exception as e:
+        print(e)
         amcry=1
  
 
@@ -56,11 +61,10 @@ def recvfile(filename, addr):
 def task_management(typo, addr):
     msg = bytes(typo, encoding='utf-8')
     addr.send(msg)   # send typo to workernodes
-    filename = addr.recv(1024)               # this might not recv all of the data
-    filename = filename.decode('utf-8')
-    print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
-    if(filename!="404"):
-        recvfile(filename, addr)
+    #filename = addr.recv(1024)               # this might not recv all of the data
+    #filename = filename.decode('utf-8')
+    #print("*** \""+filename+"\" recieved from worker")   # debugging: successful retrieval
+    recvfile(addr)
     addr.close() # now I am expecting the worker node to re establish the connection
 
 # server-side connection
