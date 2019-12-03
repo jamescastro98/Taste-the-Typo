@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taste the Typo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+#app {
+  font-size: 80px;
+  line-height: 75px;
+  font-weight: bold;
+  padding-left:10%;
+  padding-right:10%;
+  padding-top:225px;
+}
+
+strong {
+  font-weight: 700;
+}
+.content{
+  margin-top:20px;
+  padding-top:10px;
+  padding-left:15%;
+  padding-right:15%;
+  background: rgba(0, 0, 0, 0.6);
+  font-weight:lighter;
+}
+.htmlcode{
+    background:gray;
+    width:100%;
+    font-size:12px;
+    letter-spacing:1px;
+    color:black;
+}
+.footer{
+   margin-top:20px;
+   font-size:20px;
+   letter-spacing:1px;
+   font-weight: bold;
+                }
+  
+.parallax{
+   background-image: url("https://cdn.shopify.com/s/files/1/0070/4620/1459/products/91K50Sj_2BFuL._SL1500.jpg"); /*placeholder*/
+   min-height:1300px; /*should be 100%*/
+   min-width: 100%;
+   /* Create the parallax scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   font-family: 'Montserrat', sans-serif;
+   background-size: cover;
+   color:white;
+   font-size:20px;
+   letter-spacing:5px;
+        }
+</style>
+  </head>
+
+  <body>
+ <div class="parallax">
+    <div align="center">
+  <div id="app"> </div>
+
+    <div class="content">
+        <div class="words">
+  Here is the content for your HTML (note: Please do not visit these websites! They
+  are potentially malicious, and it's far better to look at the HTML from here.)
+  <div class="html-container", id = "htmlcontain"></div>
+  INSERT JS HERE THAT READS LINE BY LINE FROM {{name}} and puts it into htmlcontain id
+  <div class="htmlcode">
+  {{ htmlstr }}</xmp></div>
+<br>
+<br>
+<div class="col-sm-8">
+    {% for image in results %}
+        <h2>{{image.data}}</h2>
+        <small>Link: {{image.link}}</small>
+        
+    {% endfor %}
+</div>
+</div>
+  <br>
+    </div>
+  </div>
+ </div>
+  </body>
+</html>

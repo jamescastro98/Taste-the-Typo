@@ -16,6 +16,17 @@ def HomeView(request):
     return render(request, "home.html", {'form':form})
 #    model = Post
 #    context_object_name = "post"
+
+def HTMLView(request):
+    htmlname=request.GET.get('htmlname')
+    htmlstr=""
+    print("data/"+htmlname+".html")
+    f=open("./data/"+htmlname + ".html")
+    for lines in f:
+        htmlstr+=lines
+    f.close()
+    return render(request,"htmlpg.html",{'htmlstr':htmlstr})
+
 init = True
 def ResultView(request):
     global init
