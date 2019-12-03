@@ -90,7 +90,7 @@
   				var i;
   				for(i = 0; i < arr.length; i++) {
 				if (arr[i] != ""){
-    				out += '<div class=\"grid-item\"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" ></div>';
+    				out += '<div class=\"grid-item\"><a href= \"http://127.0.0.1:8000/htmlpg/?htmlname=' + input+ "/" + arr[i] + '"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" ></a></div>';
 				}
 			}
   			document.getElementById("resultsgrid").innerHTML = out;
