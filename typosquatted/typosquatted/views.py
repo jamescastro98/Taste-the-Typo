@@ -7,6 +7,7 @@ from .workernode import start_worker
 import signal
 import time
 import os
+import re
 #from models import Post
 
 #change!
@@ -20,12 +21,17 @@ def HomeView(request):
 def HTMLView(request):
     htmlname=request.GET.get('htmlname')
     htmlstr=""
-    print("data/"+htmlname+".html")
+    title=""
+    num=htmlname.index('/')
+    num+=1
+    title=htmlname[(num+1):].replace("_",".")
+
+    pngstr="/data/"+htmlname+".png"
     f=open("./data/"+htmlname + ".html")
     for lines in f:
         htmlstr+=lines
     f.close()
-    return render(request,"htmlpg.html",{'htmlstr':htmlstr})
+    return render(request,"htmlpg.html",{'htmlstr':htmlstr,'pngstr':pngstr,'title':title})
 
 init = True
 def ResultView(request):

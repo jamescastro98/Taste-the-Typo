@@ -16,10 +16,16 @@
   			padding: 10px;
 			margin-top:10px;
 			height: 600px;
-			width: 700px;
+			width: 800px;
 			overflow: hidden;
 		}
-		
+		.screenshot{
+			overflow: auto;
+			max-height: 100vh;
+			max-width: 100vh;
+			font-size:12px;
+			letter-spacing:1px;
+		}
 		#app {
 			font-size: 80px;
 			line-height: 75px;
@@ -61,7 +67,9 @@
 	Results for {{ input }}
 </div>
 	<div class="content">
-		To View the HTML Bodies of the respective websites, please click on the respective image.
+		To View the HTML Bodies of the respective website,
+		along with full size screenshots, 
+		please click on their respective image.
 		<div class="grid-container", id = "resultsgrid">
 			<div class="grid-item">Loading...</div> 
 
@@ -90,7 +98,7 @@
   				var i;
   				for(i = 0; i < arr.length; i++) {
 				if (arr[i] != ""){
-    				out += '<div class=\"grid-item\"><a href= \"http://127.0.0.1:8000/htmlpg/?htmlname=' + input+ "/" + arr[i] + '"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" ></a></div>';
+    				out += '<div class=\"grid-item\"><div class=\"screenshot\"><a href= \"http://127.0.0.1:8000/htmlpg/?htmlname=' + input+ "/" + arr[i] + '"><img src = \"' + directory + input+ "/" + arr[i] + '.png\" ></a></div></div>';
 				}
 			}
   			document.getElementById("resultsgrid").innerHTML = out;

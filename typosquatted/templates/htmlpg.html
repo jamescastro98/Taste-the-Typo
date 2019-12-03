@@ -13,26 +13,45 @@
   font-weight: bold;
   padding-left:10%;
   padding-right:10%;
-  padding-top:225px;
+  padding-top:100px;
 }
-
+.grid-container {
+  		display: grid;
+  		grid-template-columns: auto auto;
+			margin: 0 auto;
+		}
+.grid-item {
+  		padding: 10px;
+			margin-top:10px;
+			
+		}
 strong {
   font-weight: 700;
 }
 .content{
   margin-top:20px;
   padding-top:10px;
-  padding-left:15%;
-  padding-right:15%;
+  padding-left:5%;
+  padding-right:5%;
   background: rgba(0, 0, 0, 0.6);
   font-weight:lighter;
 }
 .htmlcode{
-    background:gray;
-    width:100%;
+    background:lightgray;
+    width:800px;
+    overflow: auto;
+    max-height: 100vh;
     font-size:12px;
     letter-spacing:1px;
     color:black;
+}
+
+.screenshot{
+    width:800px;
+    overflow: auto;
+    max-height: 100vh;
+    font-size:12px;
+    letter-spacing:1px;
 }
 .footer{
    margin-top:20px;
@@ -60,16 +79,35 @@ strong {
 
   <body>
  <div class="parallax">
-    <div align="center">
-  <div id="app"> </div>
+    <div align="center"><div id="app"> </div></div>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+    const app = document.getElementById("app");
+  const typewriter = new Typewriter(app, {
+    loop: false,
+    delay: 75
+  });
+  
+  typewriter
+    .pauseFor(2500)
+    .typeString("{{title}}")
+    .start();
+    </script>
 
     <div class="content">
         <div class="words">
-  Here is the content for your HTML (note: Please do not visit these websites! They
-  are potentially malicious, and it's far better to look at the HTML from here.)
+            <div align="center">
+  Here is the content for your HTML, as well as the full screenshot of the website.
+  Please note that to view the entire HTML document webpage, you may have to use the scrollbar.
+  Also note that this is simply a scrollable image - No need to worry for iFrame security issues :)
+            </div>
+  <div class="grid-container", id = "resultsgrid">
+      <div class="grid-item"> <div class="htmlcode">{{ htmlstr }}</div></div> 
+      <div class="grid-item"> <div class="htmlcode"><img src ={{pngstr}}/></div></div>
+
+		</div>
  
-  <div class="htmlcode">
-  {{ htmlstr }}</xmp></div>
 <br>
 <br>
 <div class="col-sm-8">
