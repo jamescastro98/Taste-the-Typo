@@ -89,7 +89,10 @@
 					//var arr = JSON.parse(this.responseText);
 					displayResults(arr);
 				}
-
+				if (navigator.appVersion.indexOf("Win") != -1){
+					directory = directory.replace("/","\\\\")
+					input = input.replace("/","\\\\")
+				}
 				indexFile.open("GET", directory + input + "/index.txt", false)
 				indexFile.send()
 
