@@ -15,8 +15,8 @@ def sendFile(filename, socket):
         print("No Result Found!")
 
 running = True
-
 def start_worker():
+    global running
     s = None
     port = 6899
     f = open('workernodeConfig.json')
@@ -51,6 +51,7 @@ def start_worker():
             print('*** file sent')
             
 def kill(signalnumber, frame):
+    global running
     running = False
 # if workernode.py is executed on its own
 if __name__ == '__main__':
