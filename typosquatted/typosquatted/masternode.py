@@ -5,16 +5,22 @@ import os
 import threading
 import signal
 import time
+import json
 
+config = None
 globalInput =  ""
 
 # adjusts output from typoGenerator.py by:
 #   removing "www." from the string (not sure if needed but is cleaner)
 #   appending "https://" to the typo (webbrowse.py doesn't work otherwise)
 def preptypo(typo):
+    global config
+    prefix = "https://"
+    if config != None:
+        prefix = config["prefix"]
     typo = typo.replace("www.","")
-    if typo.find("https://", 0, 8)==-1: # checks if https:// is present so it doesn't double dip
-        typo = 'https://'+typo
+    if typo.find(prefix, 0, 8)==-1: # checks if https:// is present so it doesn't double dip
+        typo = prefix + typo
     # print('Prepped '+typo+' to enter test()')   # debugging statement: successful prep
     return typo
 
@@ -108,6 +114,7 @@ def cleanup():
 
 def setupConnections():
     global socket
+    global config
     socket = sock.socket()
     port = 6899
     socket.bind(('', port))
@@ -119,6 +126,10 @@ def setupConnections():
     cleanupThread = threading.Thread(target = cleanup, args = ())
     cleanupThread.setDaemon(True)
     cleanupThread.start()
+
+    f = open("masternodeConfig.json")
+    config = json.load(f)
+    f.close()
 
 # creates a task for each typo that a workernode (workernode.py) can pick up and retrieve the site for
 def gatherTypoSquatSites(arg="google.com"):
