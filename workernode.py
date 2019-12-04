@@ -1,6 +1,8 @@
 from webbrowse import fetchURL
 import socket
 import time
+import json
+import sys
 
 def sendFile(filename, socket):
     try:
@@ -12,21 +14,29 @@ def sendFile(filename, socket):
     except:
         print("No Result Found!")
 
-def start_worker():
-    s = socket.socket()
-    port = 6899
-    while True:
-        try:
-            s.settimeout(None)
-            s.connect(('10.0.2.2', port)) # CHANGE TO 10.0.2.2 on VM!
-        except:
-            print("unable to connect...")
-            time.sleep(10)
-            print("trying again.")
-            continue
-        break
+running = True;
 
-    while True:
+def start_worker():
+    s = None
+    port = 6899
+    f = open('workernodeConfig.json')
+    config = json.load(f)
+    f.close()
+    ip = config["ip"]
+    while running:
+        while running:
+            try:
+                s = socket.socket()
+                s.settimeout(None)
+                s.connect((ip, port)) # CHANGE TO 10.0.2.2 on VM!
+            except:
+                print("unable to connect...")
+                time.sleep(10)
+                print("trying again.")
+                continue
+            break
+        if not running:
+            break
         server_msg = s.recv(1024)
         server_msg = server_msg.decode("utf-8")
         print(server_msg)
@@ -40,14 +50,9 @@ def start_worker():
             sendFile(filename+".png", s)
             print('*** file sent')
             
-        # send return value back to masternode?
-        # grab next job
-        s.close()
-        s = socket.socket()
-        s.settimeout(None)
-        s.connect(('10.0.2.2', port)) 
-        # the way I (Joey) Edited it, I have the master node disconnect after receving data. this is to prevent timeouts
-
+def kill(signalnumber, frame):
+    running = False
 # if workernode.py is executed on its own
 if __name__ == '__main__':
     start_worker()
+    signal.signal(signal.SIGINT, kill)
