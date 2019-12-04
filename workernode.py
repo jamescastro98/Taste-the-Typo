@@ -14,6 +14,8 @@ def sendFile(filename, socket):
     except:
         print("No Result Found!")
 
+running = True
+
 def start_worker():
     s = None
     port = 6899
