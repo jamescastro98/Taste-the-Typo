@@ -139,21 +139,20 @@ def gatherTypoSquatSites(arg="google.com"):
     # totaltypos = len(typos)
     for typo in typos:
         msg = typo
-        if typo.find("www.", 0, 4) != -1:
-            msg = msg + ' = [valid]'   # debugging statement
-            typo = preptypo(typo)       # refer to preptypo() 
-            # probably check if domain is also present
-            try:
-                while len(connections) == 0 and running == True: #stop untill a new connection comes through or the program terminates
-                    pass
-                if running == False:
-                    return
-                (con, ad) = connections[0]
-                connections = connections[1:]
-                cur_thread = threading.Thread(target=task_management, args=(typo, con))
-                threads.append(cur_thread)
-                cur_thread.start()
-                # task_management(typo, c)   # for threadless testing
-            except:
-                print('Error: unable to start thread')
+        msg = msg + ' = [valid]'   # debugging statement
+        typo = preptypo(typo)       # refer to preptypo() 
+        # probably check if domain is also present
+        try:
+            while len(connections) == 0 and running == True: #stop untill a new connection comes through or the program terminates
+                pass
+            if running == False:
+                return
+            (con, ad) = connections[0]
+            connections = connections[1:]
+            cur_thread = threading.Thread(target=task_management, args=(typo, con))
+            threads.append(cur_thread)
+            cur_thread.start()
+            # task_management(typo, c)   # for threadless testing
+        except:
+            print('Error: unable to start thread')
         # print(msg)  # debugging
