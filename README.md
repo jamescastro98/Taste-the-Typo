@@ -20,7 +20,7 @@ This project is dependent upon the usage of pyppeteer - an unofficial port of Pu
 
 **Credits**
 
-This project was designed and coded by myself, James Castro and fellow Computer Science students, William Braxton, Nathan Chan and Joey Spivack.
+This project was designed and coded by myself, James Castro and fellow Computer Science students, William Braxton, Nathan Chan and Joey Spivack. Much of this project was written on different machines where multiple people used improperly configured credentials, and as such, commits in insights != accurate.
 
 *Note: The project you are viewing is not deployed on the web currently.*
 
