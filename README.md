@@ -8,7 +8,21 @@ Typosquatting is the malicious practice of registering a domain similar to a pop
 
 **The Basics**
 
-The user opens up the webapp and types in the URL of the website they are trying to find typosquatters of. The webapp then connects via TCP to a server, which in turn generates spelling error permutations that a typosquatter may choose. These permutations are then distributed to worker nodes, which run headless chrome browsers to check the website for its existence. If it does exist, the worker nodes will save the HTML and screenshot the website, then send it back to the masternode. It is then sent back to the webapp and results are displayed dynamically as they are generated. Upon clicking on a respective screenshot, you are taken to a page with the URL of the website, alongside its HTML and its screenshot - all of which are more easily scrollable. If the search has already been conducted, then the saved results will be displayed, so wait time is rendered effectively nonexistent.
+
+The user opens up the webapp and types in the URL of the website they are trying to find typosquatters of.
+
+![alt text](frontpg.png "Front Page")
+
+The webapp then connects via TCP to a server, which in turn generates spelling error permutations that a typosquatter may choose. These permutations are then distributed to worker nodes, which run headless chrome browsers to check the website for its existence. If it does exist, the worker nodes will save the HTML and screenshot the website, then send it back to the masternode. It is then sent back to the webapp and results are displayed dynamically as they are generated.
+
+![alt text](resultspg.png "Intermediary Results")
+
+Upon clicking on a respective screenshot, you are taken to a page with the URL of the website, alongside its HTML and its screenshot - all of which are more easily scrollable. If the search has already been conducted, then the saved results will be displayed, so wait time is rendered effectively nonexistent.
+
+![alt text](res1.png "Some Results")
+
+
+![alt text](res2.png "More Results")
 
 **Running the Project**
 
