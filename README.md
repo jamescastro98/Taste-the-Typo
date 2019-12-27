@@ -1,33 +1,28 @@
-# Taste the Typo
+# Taste the Typo!
 
-This is the repository for the CSE 331 final project. We will be writing this modularly, meaning the web dashboard will execute the typogenerator,
-then after the list is generated, it will execute many instances of webbrowse.py (numinstances based upon user Input to dashboard)
+Taste the Typo is a distributed typosquatting detector that enables users to control it via web dashboard.
 
-**How to Run**
+**What is Typosquatting?**
 
-Ensure your directory is typosquatted. Type python3 manage.py runserver. Now open your browser and go to http://127.0.0.1:8000/home/
+Typosquatting is the malicious practice of registering a domain similar to a popular one, and then trying to get traffic to it and perform malicious acts to visitors. This could be a number of things - phishing, running malicious cross site scripting, etc.
 
-This is the homepage. When you type in a URL (https://facebook.com , for instance), a request is made. Spin up worker nodes by going outside the typosquatted directory and typing python3 workernodelocal.py. The file workernode.py is for worker nodes spun up in a VM, which is what we use in the "production version". It will then start going to the typosquatted sites and taking screenshots.
+**The Basics**
 
-**Python Third Party Libraries**
+The user opens up the webapp and types in the URL of the website they are trying to find typosquatters of. The webapp then connects via TCP to a server, which in turn generates spelling error permutations that a typosquatter may choose. These permutations are then distributed to worker nodes, which run headless chrome browsers to check the website for its existence. If it does exist, the worker nodes will save the HTML and screenshot the website, then send it back to the masternode. It is then sent back to the webapp and results are displayed dynamically as they are generated. Upon clicking on a respective screenshot, you are taken to a page with the URL of the website, alongside its HTML and its screenshot - all of which are more easily scrollable. If the search has already been conducted, then the saved results will be displayed, so wait time is rendered effectively nonexistent.
 
-Pyppeteer - Python port of Puppeteer - used for creating headless chrome browsers.
+**Running the Project**
 
-Django - Backend used to connect the front end to the respective scripts.
+Because this project is in development mode, we must run this project from the terminal. If you are not running a Linux machine, you may have trouble doing so To do so, simply cd into typosquatted and run the django server via manage.py. Worker nodes can be established via VM or simulated locally with workernodelocal.py
 
-**JavaScript Third Party Resources**
+**Technologies**
 
-typewriter-effect - Simple script available on npm for typewriter effect
+This project is dependent upon the usage of pyppeteer - an unofficial port of Puppeteer from javascript to Python. Django was the web framework used, alongside simple HTML, CSS and Javascript.
 
+**Credits**
 
-**Tentative Responsibilities**
+This project was designed and coded by myself, James Castro and fellow Computer Science students, William Braxton, Nathan Chan and Joey Spivack.
 
-William Braxton - Django/Backend
+*Note: The project you are viewing is not deployed on the web currently.*
 
-James Castro - Pyppeteer Scripts & Frontend
-
-Joey Spivack - Typo Generator & Network Node Connections
-
-Nathan Chan - Network Node Connections & Pyppeteer Scripts
 
     
