@@ -26,7 +26,7 @@ Upon clicking on a respective screenshot, you are taken to a page with the URL o
 
 **Running the Project**
 
-Because this project is in development mode, we must run this project from the terminal. If you are not running a Linux machine, you may have trouble doing so To do so, simply cd into typosquatted and run the django server via manage.py. Worker nodes can be established via VM or simulated locally with workernodelocal.py
+Because this project is in development mode, we must run this project from the terminal. If you are not running a Linux machine, you may have trouble doing so To do so, simply cd into typosquatted and run the django server via manage.py. Worker nodes can be established via VM or simulated locally with workernodelocal.py. The webapp is accessed at 127.0.0.1:8000/home/
 
 **Technologies**
 
